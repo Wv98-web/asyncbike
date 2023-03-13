@@ -1,0 +1,217 @@
+{
+  "layout": "v2",
+  "sections": {
+    "section1": {
+      "type": "service_section1",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/service-section1-bg.png",
+        "title": "future nomadicism",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "Less for more",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section2": {
+      "type": "service_section2",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/service-section2-bg.png",
+        "title": "Async Services",
+        "title_fs": 5,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "No matter where you ride, we've got you and your bike covered. With a range of services to support you at every turn, you can keep your bike in tune, protect it against theft, and get help whenever and wherever you need it.",
+        "description_fs": 2,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section3": {
+      "type": "service_section3",
+      "blocks": {
+        "s1": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section3-1.png",
+            "title": "In-app customer service"
+          }
+        },
+        "s2": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section3-2.png",
+            "title": "2-year warranty"
+          }
+        },
+        "s3": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section3-3.png",
+            "title": "Find My Bike position tracking"
+          }
+        },
+        "s4": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section3-4.png",
+            "title": "Over-the-air updates and diagnostics"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {
+        "title": "Included with every bike",
+        "title_fs": 5.2,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5.2,
+        "title_lh_mobile": 2.4,
+        "description": "Stet clita kasdA smooth ride comes standard.Every Cowboy has the essentials built in to give you peace of mind on the road. ",
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.4,
+        "description_lh_mobile": 2.4
+      }
+    },
+    "section4": {
+      "type": "service_section4",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/service-section4-bg.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section5": {
+      "type": "service_section5",
+      "blocks": {
+        "s1": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section5-1.png",
+            "title": "Every Cowboy has the essentials built in to give you peace of mind on the road."
+          }
+        },
+        "s2": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section5-2.png",
+            "title": "Every Cowboy has the essentials built in to give you peace of mind on the road."
+          }
+        },
+        "s3": {
+          "type": "button",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/service-section5-3.png",
+            "title": "Every Cowboy has the essentials built in to give you peace of mind on the road."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "title": "Included with every bike",
+        "title_fs": 5.2,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5.2,
+        "title_lh_mobile": 2.4
+      }
+    },
+    "section6": {
+      "type": "service_section6",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/service-section6-bg.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section7": {
+      "type": "service_section7",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/sevice-section7-bg.png",
+        "title": "Packaging Service",
+        "title_fs": 5,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "Smooth ride comes standard.Every Cowboy has the essentials built in to give you peace of mind on the road.2-year warrantyIn-app customer serviceOver-the-air updates and diagnosticsFind My Bike position tracking",
+        "description_fs": 2,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section8": {
+      "type": "service_section8",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/service-section1-bg.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section9": {
+      "type": "service_section9",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/sevice-section7-bg.png",
+        "title": "Packaging Service",
+        "title_fs": 5,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "Smooth ride comes standard.Every Cowboy has the essentials built in to give you peace of mind on the road.2-year warrantyIn-app customer serviceOver-the-air updates and diagnosticsFind My Bike position tracking",
+        "description_fs": 2,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    }
+  },
+  "order": [
+    "section1",
+    "section2",
+    "section3",
+    "section4",
+    "section5",
+    "section6",
+    "section7",
+    "section8",
+    "section9"
+  ]
+}

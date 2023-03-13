@@ -1,0 +1,139 @@
+<div class="section-{{ section.id }}">
+  <div class="app-section3">
+    <div class = "con-box">
+      {%- if section.settings.title != blank -%}
+        <h1>
+          {{ section.settings.title | escape }}
+        </h1>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+
+  /* ----------APP Section 3---------- */
+  .app-section3{background: #000;}
+  .app-section3 .con-box{width:89.6%;margin: 0 auto;padding: 5rem 0;display: flex;}
+  .app-section3 .con-box h1{width: 100%;font-family:EurostileNextW1G-WideSmBd}
+
+  @media (min-width: 767px) {
+    .section-{{ section.id }} .app-section3{
+      background:{{ section.settings.bg_color }}
+    }
+    .section-{{ section.id }} .app-section3 h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+      color: {{ section.settings.txt_color }};
+      text-align: {{ section.settings.txt_align }}
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-{{ section.id }} .app-section3{
+      background:{{ section.settings.bg_color }}
+    }
+    .section-{{ section.id }} .app-section3 h1 {
+     
+      color: {{ section.settings.txt_color }};
+      text-align: left;
+      font-size:2.2rem;
+line-height: 2.2rem;
+    }
+      .app-section3 .con-box{width:89.6%;margin: 0 auto;padding: 3.8rem 0;display: flex;}
+
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "APP Section 3",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "type": "select",
+      "id": "txt_align",
+      "options": [
+        {
+          "group": "right",
+          "value": "right",
+          "label": "右"
+        },
+        {
+          "group": "left",
+          "value": "left",
+          "label": "左"
+        }
+      ],
+      "label": "对齐方式",
+      "default": "right"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "APP Section 3"
+    }
+  ]
+}
+{% endschema %}

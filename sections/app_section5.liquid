@@ -1,0 +1,358 @@
+<div class="app-section5" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color}};{% endif %}">
+  <div class = "con-box">
+    <div class="l" >
+      {%- if section.settings.app_img != blank -%}
+        <img
+          srcset= "{{ section.settings.app_img | img_url: 'master' }}"
+          src="{{ section.settings.app_img | img_url: 'master' }}"
+          alt="{{ section.settings.app_img.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+      <div class="child-con-box">
+        {%- if section.settings.title != blank -%}
+          <h1>
+            {{ section.settings.title | escape }}
+          </h1>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <p>
+            {{ section.settings.description | escape }}
+          </p>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="r">
+
+      <div class="bg-img-box">
+        {%- if section.settings.bg_img != blank -%}
+          <img
+            class="bg_img"
+            srcset= "{{ section.settings.bg_img | img_url: 'master' }}"
+            src="{{ section.settings.bg_img | img_url: 'master' }}"
+            alt="{{ section.settings.bg_img.alt | escape }}"
+            loading="lazy"
+          />
+        {%- endif -%}
+      </div>
+
+      <div class="child-con-box">
+        {%- if section.settings.title1 != blank -%}
+          <h1>
+            {{ section.settings.title1 | escape }}
+          </h1>
+        {%- endif -%}
+        {%- if section.settings.description1 != blank -%}
+          <p>
+            {{ section.settings.description1 | escape }}
+          </p>
+        {%- endif -%}
+      </div>
+      
+    </div>
+   </div>
+</div>
+
+{%- style -%}
+
+  /* ----------APP Section 5---------- */
+  .app-section5 .con-box{width:89.6%;margin: 0 auto;padding:10rem 0 5rem 0;display: flex; justify-content: space-between;}
+  .app-section5 .con-box .l{width: 38%;text-align: center;position: relative;}
+  .app-section5 .con-box .l img{ padding: 15% 15% 12% 15%; }
+  .app-section5 .con-box h1{font-family: EurostileNextW1G-WideSmBd;text-transform:uppercase; text-align: left; padding-bottom: 3.6rem;margin: 10rem 0 4rem 0;}
+  .app-section5 .con-box p{font-family: HarmonyOS_Sans_Regular;margin: 0 auto;text-align: left;}
+  .app-section5 .con-box .r{width:40%;margin-left:auto;position:relative}
+  .app-section5 .bg-img-box{overflow: hidden;}
+  .app-section5 .con-box .r .child-con-box{text-align: center;}
+  .app-section5 .con-box .r .app_img{width: 54%;position: absolute;top: 1rem;left: -23%; }
+    .app-section5 img{width:100%;
+  vertical-align:middlel;
+  object-fit:cover;}
+  
+
+  @media (min-width: 767px) {
+    .app-section5 .l h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+      color: {{ section.settings.txt_color }};
+      border-bottom:solid 0.1rem {{ section.settings.line_color }};
+    }
+    .app-section5 .l p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+      color: {{ section.settings.txt_color }};
+    }
+
+    .app-section5 .r h1 {
+      font-size: {{ section.settings.title_fs1 }}rem;
+      line-height: {{ section.settings.title_lh1 }}rem;
+      color: {{ section.settings.txt_color1 }};
+      border-bottom:solid 0.1rem {{ section.settings.line_color }};
+    }
+
+    .app-section5 .r p {
+      font-size: {{ section.settings.description_fs1 }}rem;
+      line-height: {{ section.settings.description_lh1 }}rem;
+      color: {{ section.settings.txt_color1 }};
+    }
+  }
+
+  @media (max-width: 768px) {
+    .app-section5 .con-box{ flex-direction: column;padding:0 }
+    .app-section5 .con-box{ color:#fff !important; }
+    .app-section5 .con-box .l{ width:100% !important; min-height: 100% !important; display:flex; text-align: right !important; }
+    .app-section5 .con-box h1{ color:#fff !important; font-size: 2rem !important; margin: 0rem 0 2rem 2rem; padding: 0 0 2rem 0; border-bottom: 1px solid;text-align: right; line-height: 2.8rem;}
+    .app-section5 .con-box p{ text-align: right;  margin: 0; max-width: 100%; font-size: 1.5rem !important; line-height: 2rem;}
+    .child-con-box{ margin-left: 2rem !important; }
+    .app-section5 .con-box .l img{ padding: 0; max-width: 40% !important;}
+    .app-section5 .con-box .r{margin: 3rem 0 5rem 0; }
+    .app-section5 .con-box .r{ width: 100%; display:flex; flex-direction: row-reverse; text-align: left !important; }
+    .app-section5 .con-box .r .child-con-box{ margin:0px !important;; }
+    .app-section5 .con-box .r h1{ color:#fff !important; font-size: 2rem !important; margin: 1.5rem 0 2rem 0; padding: 2rem 0; border-bottom: 1px solid; text-align: left; }
+    .app-section5 .con-box .r p{ text-align: left;  margin: 0; max-width: 100%; font-size: 1.5rem !important; }
+    .app-section5 .con-box .r .app_img{ display:none; }
+    .app-section5 .bg-img-box{ height: 100%; text-align: right;}
+    .app-section5 .bg-img-box .bg_img{max-width: 80%;}
+    .app-section5 .con-box div{ align-items: center; } 
+    .app-section5 .con-box .r .app_img{
+      display: block;
+      position: static;
+      width:50%;
+    }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "APP Section 5",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色"
+    },
+    {
+      "type": "image_picker",
+      "id": "app_img",
+      "label": "APP图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "横线颜色"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "背景图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "app_img1",
+      "label": "APP图片1"
+    },
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "标题1"
+    },
+    {
+      "type": "range",
+      "id": "title_fs1",
+      "label": "标题文字大小1",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile1",
+      "label": "移动端标题文字大小1",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh1",
+      "label": "标题行间距1",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile1",
+      "label": "移动端标题行间距1",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description1",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs1",
+      "label": "描述文字大小1",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile1",
+      "label": "移动端描述文字大小1",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh1",
+      "label": "描述行间距1",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile1",
+      "label": "移动端描述行间距1",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "color",
+      "id": "line_color1",
+      "label": "横线颜色1"
+    },
+    {
+      "type": "color",
+      "id": "txt_color1",
+      "label": "文字颜色1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "APP Section 5"
+    }
+  ]
+}
+{% endschema %}

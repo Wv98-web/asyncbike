@@ -1,0 +1,226 @@
+<div class="service-section3">
+  <div class="top-title">
+    {%- if section.settings.description != blank -%}
+      <p>
+        {{ section.settings.description | escape }}
+      </p>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h1>
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+  </div>
+
+  <div class="con-box">
+    <ul>
+      {%- for block in section.blocks -%}
+        <li>
+          
+          {%- if block.settings.logo != blank -%}
+            <img
+              srcset= "{{ block.settings.logo | img_url: 'master' }}"
+              src="{{ block.settings.logo | img_url: 'master' }}"
+              alt="{{ block.settings.logo.alt | escape }}"
+              loading="lazy"
+            />
+          {%- endif -%}
+          {%- if block.settings.title != blank -%}
+            <p>
+              {{ block.settings.title | escape }}
+            </p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </div>
+    
+  </div>
+  
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .service-section3 .top-title h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+    .service-section3 .top-title p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+      padding: 0;
+    }
+
+    .service-section3 .l-con-box h1 {
+      font-size: {{ section.settings.left_title_fs }}rem;
+      line-height: {{ section.settings.left_title_lh }}rem;
+    }
+    .service-section3 .con-box ul{
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+    .service-section3 .con-box ul li{
+      margin-right: 0;
+      text-align: center;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .service-section3 .top-title{
+      flex-wrap: wrap-reverse;
+    }
+    .service-section3 .top-title p{
+      margin: 0 auto;
+    }
+    .service-section3 .con-box ul{
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .service-section3 .con-box ul li{
+      width: 13.5rem;
+      text-align: center;
+      margin: 10px !important;
+    }
+    .service-section3 .con-box{
+      padding-top: 0 !important;
+    }
+    .service-section3 .top-title h1{
+      text-align: left;
+    }
+    .service-section3 .top-title p{
+      max-width: 100%;
+      padding-top: 2rem;
+    }
+  }
+
+{%- endstyle -%}
+
+
+{% schema %}
+{
+  "name": "Service Section 3",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Service",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Section 3"
+    }
+  ]
+}
+{% endschema %}

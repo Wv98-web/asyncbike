@@ -1,0 +1,339 @@
+{{ 'h-section-video.css' | asset_url | stylesheet_tag }}
+
+<div class="section-video js_video_section show m_hide section-{{ section.id }} section-{{ section.id }}-padding" style="{% if section.settings.video_bg != blank %}background-image: url({{ section.settings.video_bg | img_url: 'master' }});{% endif %}">
+
+  {%- if section.settings.header != blank or section.settings.description != blank -%}
+    <div class="video-header pa_txts h_pos{{ section.settings.cap_h_pos }} v_pos{{ section.settings.cap_v_pos }} txt_{{ section.settings.txt_align }} m_txt_{{ section.settings.m_txt_align }}" style="color: {{ section.settings.txt_color }};">
+      {%- if section.settings.header != blank -%}
+        <h1 style="color: {{ section.settings.txt_color }};">
+          {{ section.settings.header | escape }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <p style="color: {{ section.settings.txt_color }};">
+          {{ section.settings.description }}
+        </p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.video_url != blank -%}
+    <video class="myVideo" style="background-color: {{ section.settings.bg_color }};" {% if section.settings.poster != blank %} poster="{{ section.settings.poster | img_url: 'master' }}"{% endif %} controls="controls" controlsList="nodownload" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5">
+      <source src={{ section.settings.video_url }} type="video/mp4">
+    </video>
+    <div class="video-button js_video_play"></div>
+  {%- endif -%}
+
+</div>
+
+<div class="section-video hide m_flex section-{{ section.id }} section-{{ section.id }}-padding">
+  {%- if section.settings.header != blank or section.settings.description != blank -%}
+  <div class="video-header w_full pa_txts txt_{{ section.settings.txt_align }} m_txt_{{ section.settings.m_txt_align }}" style="padding: 0 1.5em; color: {{ section.settings.txt_color }};">
+    {%- if section.settings.header != blank -%}
+      <h1 style="color: {{ section.settings.txt_color }};">
+        {{ section.settings.header | escape }}
+      </h1>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <p style="color: {{ section.settings.txt_color }};">
+        {{ section.settings.description }}
+      </p>
+    {%- endif -%}
+  </div>
+  {%- endif -%}
+
+  {%- if section.settings.video_url != blank or section.settings.m_video_url -%}
+  <div class="myVideo-wrapper">
+    {% comment %} <div class="myvideo-txt hide m_show" style="margin-bottom: 1rem; color: {{ section.settings.txt_color }};">
+      <span>Play the video fullscreen</span> <span><svg t="1670290489139" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4149" width="48" height="48"><path d="M164.3 209.7v614.6l710.1-710.1 35.4 35.4-710.2 710.1h614.6v50h-700v-700h50.1z" fill="#ff4f00" p-id="4150"></path></svg></span></div> {% endcomment %}
+    <video class="myVideo" style="background-color: {{ section.settings.bg_color }};" {% if section.settings.poster != blank %} poster="{{ section.settings.poster | img_url: 'master' }}"{% endif %} controls="controls" controlsList="nodownload" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5">
+      <source src="{% if section.settings.m_video_url != blank %}{{ section.settings.m_video_url }}{% else %}{{ section.settings.video_url }}{% endif %}" type="video/mp4">
+    </video>
+    <div class="video-button js_video_play"></div>
+  </div>
+  {%- endif -%}
+
+  <div class="video-loadmore">
+    <div class="video-logo">
+      <img
+        srcset= "https://cdn.shopify.com/s/files/1/0618/3256/0794/files/VIDEO_LOGO.png"
+        src="https://cdn.shopify.com/s/files/1/0618/3256/0794/files/VIDEO_LOGO.png"
+        alt=""
+        loading="lazy"
+        width=""
+        height=""
+      >
+    </div>
+    <div class="video-jiantou">
+      <img
+        srcset= "https://cdn.shopify.com/s/files/1/0618/3256/0794/files/VIDEO_GIF.gif"
+        src="https://cdn.shopify.com/s/files/1/0618/3256/0794/files/VIDEO_GIF.gif"
+        alt=""
+        loading="lazy"
+        width=""
+        height=""
+      >
+    </div>
+    <div class="video-more-txt" style="color: {{ section.settings.txt_color }};"><span>Scroll down to see more</span></div>
+  </div>
+</div>
+
+{%- style -%}
+  @media (min-width: 767px) {
+    .section-{{ section.id }}.section-video .video-header h1 {
+      font-size: {{ section.settings.h_fs }}rem;
+    }
+
+    .section-{{ section.id }}.section-video .video-header p {
+        font-size: {{ section.settings.txt_fs }}rem;
+        max-width: 65%;
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-video::before {
+      background-color: {{ section.settings.bg_color }};
+      -webkit-backdrop-filter: blur({{ section.settings.bg_filter }}px);
+      backdrop-filter: blur({{ section.settings.bg_filter }}px);
+    }
+
+    .section-video::after {
+      {% if section.settings.m_video_bg != blank %}background-image: url({{ section.settings.m_video_bg | img_url: 'master' }});{% endif %}
+    }
+
+    .section-{{ section.id }}.section-video .video-header h1 {
+      font-size: {{ section.settings.m_h_fs }}rem;
+    }
+
+    .section-{{ section.id }}.section-video .video-header p,
+    .section-{{ section.id }}.section-video .myvideo-txt,
+    .section-{{ section.id }}.section-video .video-more-txt {
+        font-size: {{ section.settings.m_txt_fs }}rem;
+    }
+
+    .section-{{ section.id }}.section-video .myvideo-txt svg {
+      width: {{ section.settings.m_txt_fs }}rem;
+      height: {{ section.settings.m_txt_fs }}rem;
+    }
+
+    .section-{{ section.id }}.section-video video {
+      border-radius: {{ section.settings.video_radius }}rem;
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Video Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "== Header"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "标题"
+    },
+    {
+        "type": "range",
+        "id": "h_fs",
+        "label": "标题文字大小",
+        "default": 6.4,
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+        "type": "range",
+        "id": "m_h_fs",
+        "label": "标题文字大小(移动端)",
+        "default": 2,
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+        "type": "range",
+        "id": "txt_fs",
+        "label": "描述文字大小",
+        "default": 2.3,
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+        "type": "range",
+        "id": "m_txt_fs",
+        "label": "描述文字大小(移动端)",
+        "default": 1.2,
+        "min": 1,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+      "type": "select",
+      "id": "txt_align",
+      "options": [
+        {
+          "group": "center",
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "group": "left",
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "group": "right",
+          "value": "right",
+          "label": "右对齐"
+        }
+      ],
+      "label": "文字对齐",
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "m_txt_align",
+      "options": [
+        {
+          "group": "center",
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "group": "left",
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "group": "right",
+          "value": "right",
+          "label": "右对齐"
+        }
+      ],
+      "label": "文字对齐(移动端)",
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "== Only for pc device use"
+    },
+    {
+      "type": "range",
+      "id": "cap_v_pos",
+      "label": "Content vertical position",
+      "info":" <= 50: Top position , > 50 bottom position",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "cap_h_pos",
+      "label": "Content horizontal position",
+      "info":" <= 50: Left position , > 50 right position",
+      "default": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "== Color"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "type": "range",
+      "id": "bg_filter",
+      "label": "背景模糊",
+      "default": 15,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "== 视频设置"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "视频地址",
+      "info": "在管理后台文件中上传, 获取链接, 复制到此处"
+    },
+    {
+      "type": "text",
+      "id": "m_video_url",
+      "label": "视频地址(移动端)"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster",
+      "label": "视频封面"
+    },
+    {
+      "type": "image_picker",
+      "id": "m_poster",
+      "label": "视频封面(移动端)"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_bg",
+      "label": "视频背景图"
+    },
+    {
+      "type": "image_picker",
+      "id": "m_video_bg",
+      "label": "视频背景图(移动端)"
+    },
+    {
+        "type": "range",
+        "id": "video_radius",
+        "label": "视频圆角",
+        "info": "Only for mobile use",
+        "default": 1,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Banner"
+    }
+  ]
+}
+{% endschema %}

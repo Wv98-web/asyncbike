@@ -1,0 +1,150 @@
+<div class="app-section10" style="{% if section.settings.bg_img != blank %}background-image: url({{ section.settings.bg_img | img_url: 'master' }});{% endif %}">
+  <div class="con-box">
+    {%- if section.settings.title != blank -%}
+      <h1>
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <p>
+        {{ section.settings.description | escape }}
+      </p>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- style -%}
+  /* ----------APP Section 10---------- */
+  .app-section10{background-repeat: no-repeat;background-position: center;background-size: cover;height: 74rem;position:relative}
+  .app-section10 .con-box{width: 60%;text-align: center;position: absolute;top: 25rem;left: 20%;}
+  .app-section10 .con-box h1{font-family: EurostileNextW1G-WideSmBd;color: #fff;text-transform:uppercase}
+  .app-section10 .con-box p{font-family: EurostileNextW1G-Regular;color: #fff;max-width: 60%;margin: 0 auto}
+
+  @media (min-width: 767px) {
+    .app-section10 h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+    .app-section10 p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+    }
+    .app-section10{ background-attachment: fixed !important; height: 800px;}
+  }
+
+  @media (max-width: 768px) {
+    .app-section10{ background-attachment: fixed !important; height: 32rem;}
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "APP Section 10",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "背景图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "APP Section 10"
+    }
+  ]
+}
+{% endschema %}

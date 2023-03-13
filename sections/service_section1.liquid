@@ -1,0 +1,149 @@
+<div class="service-section1" style="{% if section.settings.bg_img != blank %}background-image: url({{ section.settings.bg_img | img_url: 'master' }});{% endif %}">
+  <div class="con-box">
+    {%- if section.settings.title != blank -%}
+      <h1>
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <p>
+        {{ section.settings.description | escape }}
+      </p>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .service-section1 h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+    .service-section1 p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-section1{
+      height: 100%;
+    }
+    .service-section1 .con-box{
+      top: 38%;
+    }
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Service Section 1",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "背景图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Service Section 1"
+    }
+  ]
+}
+{% endschema %}

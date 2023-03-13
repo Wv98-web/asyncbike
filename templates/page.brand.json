@@ -1,0 +1,365 @@
+{
+  "layout": "brand",
+  "sections": {
+    "2ada063e-b747-4e5f-850b-81ed5c0e8ca8": {
+      "type": "h_video",
+      "settings": {
+        "header": "TIME CLAIMS ITSELF BY EVOLUTION",
+        "h_fs": 6.4,
+        "m_h_fs": 2.4,
+        "description": "Life is uncharted territory. \nExplore your terrain with ASYNC",
+        "txt_fs": 2.8,
+        "m_txt_fs": 1.4,
+        "txt_align": "right",
+        "m_txt_align": "left",
+        "cap_v_pos": 5,
+        "cap_h_pos": 97,
+        "txt_color": "#ffffff",
+        "bg_color": "",
+        "bg_filter": 0,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/259e24c3b8c540a795c4eaeae111bb4b.mp4",
+        "m_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fb77f0e9d80445389484d1d3cadb51e7.mp4",
+        "poster": "shopify:\/\/shop_images\/36.png",
+        "m_poster": "shopify:\/\/shop_images\/55.png",
+        "video_bg": "shopify:\/\/shop_images\/Ecommerce_Classic_6.png",
+        "m_video_bg": "shopify:\/\/shop_images\/Ecommerce_Classic_6.png",
+        "video_radius": 1
+      }
+    },
+    "a33db17e-d153-4481-9abe-da7e3e987406": {
+      "type": "h_brand",
+      "blocks": {
+        "5e5f7944-f4fa-4350-a530-5b5fba5b748d": {
+          "type": "abc",
+          "settings": {
+            "short_info": "In 1903,the Wright brothers boldly used fixed-wing to complete the first successful controllable power flight.",
+            "full_info": "Action always beats intention.",
+            "txt_align": "right",
+            "cap_v_pos": 97,
+            "cap_h_pos": 100,
+            "word_image": "shopify:\/\/shop_images\/BRAND_A.png",
+            "brand_image": "shopify:\/\/shop_images\/BRAND_1.png",
+            "m_brand_image": "shopify:\/\/shop_images\/BRAND_M_1.png",
+            "mask_position": "left",
+            "m_mask_position": "left",
+            "word_position": "left"
+          }
+        },
+        "74f147b7-2dd8-4dc0-9e3c-309a7c342b29": {
+          "type": "abc",
+          "settings": {
+            "short_info": "In 1543, Nicolaus Copernicus became the first scientist to propose the heliocentric theory.",
+            "full_info": "Spurn dogma and renew the world.",
+            "txt_align": "left",
+            "cap_v_pos": 97,
+            "cap_h_pos": 0,
+            "word_image": "shopify:\/\/shop_images\/BRAND_S.png",
+            "brand_image": "shopify:\/\/shop_images\/BRAND_2.png",
+            "m_brand_image": "shopify:\/\/shop_images\/BRAND_M_2.png",
+            "mask_position": "right",
+            "m_mask_position": "right",
+            "word_position": "right"
+          }
+        }
+      },
+      "block_order": [
+        "5e5f7944-f4fa-4350-a530-5b5fba5b748d",
+        "74f147b7-2dd8-4dc0-9e3c-309a7c342b29"
+      ],
+      "settings": {
+        "txt_color": "#ffffff",
+        "highlight_color": "#ff4f00",
+        "cl_overlay": "rgba(0,0,0,0.33)",
+        "cl_filter": 15,
+        "fs": 2,
+        "m_fs": 1.2,
+        "h_fs": 4.8,
+        "m_h_fs": 2,
+        "full_width": true,
+        "color_scheme": "accent-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_left": 36,
+        "padding_right": 36
+      }
+    },
+    "d3a3fa94-0959-422f-8752-82d26b1c297d": {
+      "type": "h_brand",
+      "blocks": {
+        "dda4f045-85c6-46df-a4da-f86a4f9f9a49": {
+          "type": "abc",
+          "settings": {
+            "short_info": "In August 28, 1963, Martin Luther King Jr.'s speech \"I Have a Dream\" has become one of the defining moments of the Civil Rights Movement.",
+            "full_info": "You lead the change.",
+            "txt_align": "right",
+            "cap_v_pos": 95,
+            "cap_h_pos": 100,
+            "word_image": "shopify:\/\/shop_images\/BRAND_Y.png",
+            "brand_image": "shopify:\/\/shop_images\/BRAND_3.png",
+            "m_brand_image": "shopify:\/\/shop_images\/BRAND_M_3.png",
+            "mask_position": "left",
+            "m_mask_position": "left",
+            "word_position": "left"
+          }
+        },
+        "41d9d70a-3fb1-4851-a7cf-ee4498b70e7f": {
+          "type": "abc",
+          "settings": {
+            "short_info": "Between 1888 and 1889, Van Gogh's paintings \"Starry Night\" were born.",
+            "full_info": "No need to follow blindly,\npress ahead on a whim.",
+            "txt_align": "center",
+            "cap_v_pos": 93,
+            "cap_h_pos": 100,
+            "word_image": "shopify:\/\/shop_images\/BRAND_N.png",
+            "brand_image": "shopify:\/\/shop_images\/BRAND_4.png",
+            "m_brand_image": "shopify:\/\/shop_images\/BRAND_M_4.png",
+            "mask_position": "left",
+            "m_mask_position": "right",
+            "word_position": "left"
+          }
+        },
+        "6407e180-17b3-4af5-a142-3feb1f6f5b52": {
+          "type": "abc",
+          "settings": {
+            "short_info": "On July 20, 1969, the first humans landed on the surface of the Moon.",
+            "full_info": "Choose to step into the unknown.",
+            "txt_align": "center",
+            "cap_v_pos": 93,
+            "cap_h_pos": 0,
+            "word_image": "shopify:\/\/shop_images\/BRAND_C.png",
+            "brand_image": "shopify:\/\/shop_images\/BRAND_5.png",
+            "m_brand_image": "shopify:\/\/shop_images\/BRAND_M_5.png",
+            "mask_position": "right",
+            "m_mask_position": "left",
+            "word_position": "right"
+          }
+        }
+      },
+      "block_order": [
+        "dda4f045-85c6-46df-a4da-f86a4f9f9a49",
+        "41d9d70a-3fb1-4851-a7cf-ee4498b70e7f",
+        "6407e180-17b3-4af5-a142-3feb1f6f5b52"
+      ],
+      "settings": {
+        "txt_color": "#ffffff",
+        "highlight_color": "#ff4f00",
+        "cl_overlay": "rgba(0,0,0,0.33)",
+        "cl_filter": 15,
+        "fs": 2,
+        "m_fs": 1.2,
+        "h_fs": 4.8,
+        "m_h_fs": 2,
+        "full_width": true,
+        "color_scheme": "accent-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_left": 36,
+        "padding_right": 36
+      }
+    },
+    "a5902dfb-3cfd-48d9-b5e9-616236d4130f": {
+      "type": "h_team",
+      "blocks": {
+        "231ab115-7ff0-4ec9-9a47-1001262866a1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_2d5c77f8-affa-4e10-9c0f-3afa804a6c13.jpg",
+            "title": ""
+          }
+        },
+        "9ef65650-e418-4d39-8dd1-50e53059424e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_fa157722-5d2a-40e7-836b-e7bac0499817.jpg",
+            "title": ""
+          }
+        },
+        "7f64fbe8-1a4d-476b-807f-bb3174e3d0bf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_64ac9375-76d0-468b-8caf-600d65023fcb.jpg",
+            "title": ""
+          }
+        },
+        "0726adbd-9643-41db-88da-4c858c020f6e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_e8ec4b1c-3273-42b7-8aef-90c52734c37b.jpg",
+            "title": ""
+          }
+        },
+        "d84edd88-3c32-49a2-9858-6b7361a77a03": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_985b50d1-d083-4d89-8685-dc176ecc951a.jpg",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "231ab115-7ff0-4ec9-9a47-1001262866a1",
+        "9ef65650-e418-4d39-8dd1-50e53059424e",
+        "7f64fbe8-1a4d-476b-807f-bb3174e3d0bf",
+        "0726adbd-9643-41db-88da-4c858c020f6e",
+        "d84edd88-3c32-49a2-9858-6b7361a77a03"
+      ],
+      "settings": {
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_left": 36,
+        "padding_right": 36
+      }
+    },
+    "619551f1-c71b-4536-ad31-6fd6d9829cf1": {
+      "type": "h_timeline",
+      "blocks": {
+        "66d24f47-be25-4c48-a6d6-2ed36a15cf12": {
+          "type": "team",
+          "settings": {
+            "team_image": "shopify:\/\/shop_images\/1_b229a1e7-cf60-4c14-bad6-a29937f352f1.jpg",
+            "team_title": ""
+          }
+        },
+        "076f7dde-da17-4a76-87e4-056132389b17": {
+          "type": "team",
+          "settings": {
+            "team_image": "shopify:\/\/shop_images\/2_462cb657-a40f-403e-853a-a3c2ae62b2d8.jpg",
+            "team_title": ""
+          }
+        },
+        "4350a6cd-a60e-44ad-a248-6a7db3b2ae50": {
+          "type": "team",
+          "settings": {
+            "team_image": "shopify:\/\/shop_images\/3_9f4f60e1-173a-487b-8772-74b21dd31b81.jpg",
+            "team_title": ""
+          }
+        },
+        "ad414b6b-0089-43d7-bd17-b8744a249062": {
+          "type": "team",
+          "settings": {
+            "team_image": "shopify:\/\/shop_images\/4_c10015b1-c29d-46f3-983d-0ddf7b733894.jpg",
+            "team_title": ""
+          }
+        },
+        "bf2f1392-6c71-4d6f-bdc5-50346c4e1b64": {
+          "type": "team",
+          "settings": {
+            "team_image": "shopify:\/\/shop_images\/5_557589c7-10c0-4b76-978d-9129f5f31904.jpg",
+            "team_title": ""
+          }
+        },
+        "a426e1c1-5975-45c7-968b-6f52d0356a7f": {
+          "type": "line",
+          "settings": {
+            "line_image": "shopify:\/\/shop_images\/35_269f8814-b889-4782-b23a-a6ce94339108.png",
+            "line_color": "#191919",
+            "line_time": "2022\/04\/26",
+            "line_content": "Design Sketch",
+            "date_fs": 3.4,
+            "m_date_fs": 1.6,
+            "des_fs": 2.1,
+            "m_des_fs": 1
+          }
+        },
+        "b39b4bb9-bf2b-4b66-8f9a-6edb7adb5878": {
+          "type": "line",
+          "settings": {
+            "line_image": "shopify:\/\/shop_images\/37_9cc48e93-b239-4266-8c95-8ffc9643dea4.png",
+            "line_color": "#333333",
+            "line_time": "2022\/06\/24",
+            "line_content": "Computer Aided Design",
+            "date_fs": 3.4,
+            "m_date_fs": 1.6,
+            "des_fs": 2.1,
+            "m_des_fs": 1
+          }
+        },
+        "b031766c-71da-47b4-899f-8febcc77268e": {
+          "type": "line",
+          "settings": {
+            "line_image": "shopify:\/\/shop_images\/38.png",
+            "line_color": "#4c4c4c",
+            "line_time": "2022\/08\/12",
+            "line_content": "Appearance Prototype",
+            "date_fs": 3.4,
+            "m_date_fs": 1.6,
+            "des_fs": 2.1,
+            "m_des_fs": 1
+          }
+        },
+        "9bca2a26-a424-4800-848e-187ab164b98f": {
+          "type": "line",
+          "settings": {
+            "line_image": "shopify:\/\/shop_images\/39.png",
+            "line_color": "#939090",
+            "line_time": "2022\/10\/24",
+            "line_content": "Functional Prototype",
+            "date_fs": 3.4,
+            "m_date_fs": 1.6,
+            "des_fs": 2.1,
+            "m_des_fs": 1
+          }
+        },
+        "2229698c-22e9-4a16-9ce8-c61fde536f9d": {
+          "type": "line",
+          "settings": {
+            "line_image": "shopify:\/\/shop_images\/40.png",
+            "line_color": "#999999",
+            "line_time": "2022\/11\/09",
+            "line_content": "Mold production",
+            "date_fs": 3.4,
+            "m_date_fs": 1.6,
+            "des_fs": 2.1,
+            "m_des_fs": 1
+          }
+        },
+        "c3b0080f-c6b5-4fad-8cbc-ae451f2a9d49": {
+          "type": "line",
+          "settings": {
+            "line_image": "shopify:\/\/shop_images\/41.png",
+            "line_color": "#cccccc",
+            "line_time": "2022\/12\/28",
+            "line_content": "Test",
+            "date_fs": 3.4,
+            "m_date_fs": 1.6,
+            "des_fs": 2.1,
+            "m_des_fs": 1
+          }
+        }
+      },
+      "block_order": [
+        "66d24f47-be25-4c48-a6d6-2ed36a15cf12",
+        "076f7dde-da17-4a76-87e4-056132389b17",
+        "4350a6cd-a60e-44ad-a248-6a7db3b2ae50",
+        "ad414b6b-0089-43d7-bd17-b8744a249062",
+        "bf2f1392-6c71-4d6f-bdc5-50346c4e1b64",
+        "a426e1c1-5975-45c7-968b-6f52d0356a7f",
+        "b39b4bb9-bf2b-4b66-8f9a-6edb7adb5878",
+        "b031766c-71da-47b4-899f-8febcc77268e",
+        "9bca2a26-a424-4800-848e-187ab164b98f",
+        "2229698c-22e9-4a16-9ce8-c61fde536f9d",
+        "c3b0080f-c6b5-4fad-8cbc-ae451f2a9d49"
+      ],
+      "settings": {
+        "header": "TIME LINE",
+        "now": "2022\/04\/26",
+        "show_team": true,
+        "team_height": 25,
+        "full_width": true,
+        "color_scheme": "accent-1",
+        "footer_image": "shopify:\/\/shop_images\/FOOTER_MENU_LOGO.png",
+        "menu": "link-list-1",
+        "newsletter_heading": "STAY UPDATED",
+        "newsletter_sub_heading": "Sign up for newsletter to get updates straight to your inbox"
+      }
+    }
+  },
+  "order": [
+    "2ada063e-b747-4e5f-850b-81ed5c0e8ca8",
+    "a33db17e-d153-4481-9abe-da7e3e987406",
+    "d3a3fa94-0959-422f-8752-82d26b1c297d",
+    "a5902dfb-3cfd-48d9-b5e9-616236d4130f",
+    "619551f1-c71b-4536-ad31-6fd6d9829cf1"
+  ]
+}

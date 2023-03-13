@@ -1,0 +1,331 @@
+{{ 'h-section-timeline.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.show_team -%}
+  <div class="team-section isolate{% unless section.settings.full_width %} page-width{% endunless %} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }} hide m_show">
+
+    <div class="team-section__media">
+      <div class="team_swiper2 swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when 'team' -%}
+                {%- if block.settings.team_image != blank -%}
+                  <div class="swiper-slide team-content" style="background-image: url({{ block.settings.team_image | img_url: 'master' }}); background-repeat: no-repeat; background-position: center center; background-size: contain;">
+                    <div class="team-title team_txt">
+                        {{ block.settings.team_title }}
+                    </div>
+                  </div>
+                {%- endif -%}
+            {%- endcase -%}
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<script>
+  var teamSwiper2 = new Swiper('.team_swiper2',{
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    observer: true,
+    observeParents: true
+  });
+</script>
+
+<div class="timeline-section isolate{% unless section.settings.full_width %} page-width{% endunless %} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}">
+  <div class="timeline-content page-width">
+    <div class="timeline-header show m_hide">
+      <h3>{{ section.settings.header | escape }}</h3>
+      <p>From {{ section.settings.now | escape }}</p>
+      <p>To now</p>
+    </div>
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="timelines">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'line' -%}
+              <div class="timeline-item block-{{ block.id }}">
+                <div class="image">
+                    <img
+                      srcset= "{{ block.settings.line_image | img_url: 'master' }}"
+                      src="{{ block.settings.line_image | img_url: 'master' }}"
+                      alt="{{ block.settings.line_image.alt | escape }}"
+                      loading="lazy"
+                      width="{{ block.settings.line_image.width }}"
+                      height="{{ block.settings.line_image.height }}"
+                    >
+                </div>
+    
+                <div class="line" style="background-color: {{ block.settings.line_color }}"></div>
+    
+                <div class="content">
+                    <div class="date">{{ block.settings.line_time | escape }}</div>
+                    <div class="des">{{ block.settings.line_content | escape }}</div>
+                </div>
+              </div>
+            {%- else -%}
+              
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+
+
+{%- style -%}
+  .fp-section{height:auto}
+  @media (min-width: 767px) {
+    {% for block in section.blocks %}
+      .timeline-item.block-{{ block.id }} .content .date {
+        font-size: {{ block.settings.date_fs }}rem;
+      }
+    {% endfor %}
+  }
+
+  @media (max-width: 768px) {
+    {% for block in section.blocks %}
+      .timeline-item.block-{{ block.id }} .content .date {
+        font-size: {{ block.settings.m_date_fs }}rem;
+      }
+    {% endfor %}
+
+    .team-section {
+        height: {{ section.settings.team_height }}rem;
+    }
+  }
+    @media (min-width: 767px) {
+    {% for block in section.blocks %}
+      .timeline-item.block-{{ block.id }} .content .des {
+        font-size: {{ block.settings.des_fs }}rem;
+      }
+    {% endfor %}
+  }
+
+  @media (max-width: 768px) {
+    {% for block in section.blocks %}
+      .timeline-item.block-{{ block.id }} .content .des {
+        font-size: {{ block.settings.m_des_fs }}rem;
+      }
+    {% endfor %}
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Time Line",
+  "tag": "section",
+  "class": "section fp-auto-height",
+  "settings": [
+    {
+      "type": "header",
+      "content": "== Text"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "时间线标题",
+      "default": "TIME LINE"
+    },
+    {
+      "type": "text",
+      "id": "now",
+      "label": "时间线起始时间(文本输入)",
+      "default": "2020/07/05"
+    },
+    {
+      "type": "header",
+      "content": "移动端Team Banner模块如果展示, 需要在此重新设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_team",
+      "label": "是否展示Team Banner",
+      "info": "此设置只在移动端有用",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "team_height",
+      "label": "team图片模块高度(移动端)",
+      "default": 30,
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "unit": "rem"
+    },
+    {
+      "type": "header",
+      "content": "== LAYOUT"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "accent-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "== Footer settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_image",
+      "label": "底部图片"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "STAY UPDATED",
+      "label": "邮件标题"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_sub_heading",
+      "label": "邮件副标题",
+      "default": "Sign up for newsletter to get updates straight to your inbox"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team",
+      "name": "Team",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "team_image",
+          "label": "BANNER图"
+        },
+        {
+          "type": "header",
+          "content": "== Text"
+        },
+        {
+          "type": "richtext",
+          "id": "team_title",
+          "label": "标题"
+        }
+      ]
+    },
+    {
+      "type": "line",
+      "name": "Line",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "line_image",
+          "label": "图片"
+        },
+        {
+          "type": "color",
+          "id": "line_color",
+          "label": "中间线颜色",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "text",
+          "id": "line_time",
+          "label": "时间",
+          "default": "2020/0601"
+        },
+        {
+          "type": "textarea",
+          "id": "line_content",
+          "label": "描述",
+          "default": "Lorem ipsum dolor sit amet, consetetur"
+        },
+        {
+            "type": "range",
+            "id": "date_fs",
+            "label": "日期文字大小",
+            "default": 3.6,
+            "min": 1,
+            "max": 10,
+            "step": 0.1,
+            "unit": "rem"
+        },
+        {
+            "type": "range",
+            "id": "m_date_fs",
+            "label": "日期文字大小(移动端)",
+            "default": 1.8,
+            "min": 1,
+            "max": 10,
+            "step": 0.1,
+            "unit": "rem"
+        },
+        {
+            "type": "range",
+            "id": "des_fs",
+            "label": "描述文字大小",
+            "default": 2.4,
+            "min": 1,
+            "max": 10,
+            "step": 0.1,
+            "unit": "rem"
+        },
+        {
+            "type": "range",
+            "id": "m_des_fs",
+            "label": "描述文字大小(移动端)",
+            "default": 1,
+            "min": 1,
+            "max": 10,
+            "step": 0.1,
+            "unit": "rem"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Time Line"
+    }
+  ]
+}
+{% endschema %}

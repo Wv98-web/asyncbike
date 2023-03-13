@@ -1,0 +1,219 @@
+<div class="app-section12" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color}};{% endif %}">
+  <div class = "con-box">
+    
+
+    <div class="r">
+      {%- if section.settings.title != blank -%}
+        <h1>
+          {{ section.settings.title | escape }}
+        </h1>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <p>
+          {{ section.settings.description | escape }}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="l" style="{% if section.settings.bg_img != blank %}background-image: url({{ section.settings.bg_img | img_url: 'master' }});{% endif %}">
+
+      {%- if section.settings.app_img != blank -%}
+        <img
+          srcset= "{{ section.settings.app_img | img_url: 'master' }}"
+          src="{{ section.settings.app_img | img_url: 'master' }}"
+          alt="{{ section.settings.app_img.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+      {%- if section.settings.left_img != blank -%}
+        <img
+          srcset= "{{ section.settings.left_img | img_url: 'master' }}"
+          src="{{ section.settings.left_img | img_url: 'master' }}"
+          alt="{{ section.settings.left_img.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+    </div>
+
+   </div>
+</div>
+
+{%- style -%}
+
+  /* ----------APP Section 12---------- */
+    .app-section12{padding-top:5rem;}
+  .app-section12 .con-box{width:89.6%;margin: 0 auto;padding: 5rem 0;display: flex;}
+  .app-section12 .con-box .l{width: 50%;text-align: center;position: relative;margin-left:auto; background-position: center,center; background-repeat: no-repeat;background-size: cover;}
+  .app-section12 .con-box .l img{width: 40%;position: absolute;top: 15%;left: -20%;margin-left: auto;}
+
+  .app-section12 .con-box .r{width: 50%;text-align: left; padding: 20% 0;}
+  .app-section12 .con-box .r h1{font-family: EurostileNextW1G-WideSmBd;text-transform:uppercase;padding-bottom: 3.6rem;margin-bottom: 4rem;width: 60%;}
+  .app-section12 .con-box .r p{font-family: HarmonyOS_Sans_Regular;max-width: 60%;text-align: left;}
+
+  @media (min-width: 767px) {
+    .app-section12 .r h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+      color: {{ section.settings.txt_color }};
+      border-bottom:solid 0.1rem {{ section.settings.line_color }};
+    }
+    
+    .app-section12 .r p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+      color: {{ section.settings.txt_color }};
+    }
+    .app-section12 .con-box .l img{ width: 300px !important; }
+  }
+
+  @media (max-width: 768px) {
+    .app-section12 .con-box{padding: 7rem 0;}
+     .app-section12{padding-top:0rem;}
+    .app-section12 .con-box .r { width: 100%; padding: 0; text-align: left;     margin-top: 26rem;}
+    .app-section12 .con-box .r p{ color: #fff; text-align: left; font-size:1.5rem;line-height:2rem; max-width: 95% !important; }
+    .app-section12 .con-box .r h1{ color: #fff; text-align: left;font-size:2rem;padding:0 0 2rem 0;;margin-bottom:2rem;border-bottom: 1px solid;line-height: 2.8rem;} 
+    .app-section12 .con-box .l{ position: absolute;
+    height: 20rem;
+    width: 65%;
+    right: 5%; }
+    .app-section12 .con-box .l img{ 
+      width: 55% !important;
+      position: absolute;
+      top:-20%;
+      left: -40%;
+      margin-left: auto;
+      height: auto !important;
+    }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "APP Section 12",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "横线颜色"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "背景图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "app_img",
+      "label": "APP图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "APP Section 2"
+    }
+  ]
+}
+{% endschema %}

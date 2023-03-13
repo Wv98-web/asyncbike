@@ -1,0 +1,172 @@
+<div class="a1-section5 ani-progress">
+  <div class="con-box">
+    <div class="top flex">
+      <div class="l flex">
+        <ul class="flex">
+          <li>
+            <div class="slide-default">
+                <h2>750W</h2>
+                <p>Power</p>
+            </div>
+            <div class="slide-real">
+                <h2>1200W</h2>
+                <p>Power</p>
+            </div>
+          </li>
+          <li>
+            <div class="slide-default">
+                <h2>50FT-LB</h2>
+                <p>Peak torque</p>
+            </div>
+            <div class="slide-real">
+                <h2>71FT-LB</h2>
+                <p>Peak torque</p>
+            </div>
+          </li>
+          <li>
+            <div class="slide-default">
+                <h2>28MPH</h2>
+                <p>Speed</p>
+            </div>
+            <div class="slide-real">
+                <h2>32MPH</h2>
+                <p>Speed</p>
+            </div>
+          </li>
+          <li>
+            <div class="slide-default">
+              <h2>17.4%</h2>
+              <p>Slope</p>
+            </div>
+            <div class="slide-real">
+                <h2>26.8%</h2>
+                <p>Slope</p>
+              </div>
+          </li>
+          <li>
+            <div class="slide-default">
+                <h2>5″</h2>
+                <p>0~Max</p>
+            </div>
+            <div class="slide-real">
+                <h2>3″</h2>
+                <p>0~Max</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="r">
+        <div class="box">
+            <div class="slide-default">
+                <h4>STANDARD</h4>
+                <h2>MOOD</h2>
+            </div>
+            <div class="slide-real">
+                <h4>OFF-ROAD</h4>
+                <h2>MOOD</h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="s2">
+      <ul id="bar">
+        <li class="flex">
+          <div class="l">Power</div>
+          <div class="c progressBox">
+            <div class="splitLine"><span class="demo" data-value="100%"></span></div>
+            <div class="progressBar"><i></i><i></i></div>
+            <div class="r data"><span class="text">160%</span></div>
+          </div>
+        </li>
+        <li class="flex">
+          <div class="l">Peak torque</div>
+          <div class="c progressBox">
+            <div class="splitLine"><span class="demo" data-value="100%"></span></div>
+            <div class="progressBar"><i></i><i></i></div>
+            <div class="r data"><span class="text">142%</span></div>
+          </div>
+        </li>
+        <li class="flex">
+          <div class="l">Speed</div>
+          <div class="c progressBox">
+            <div class="splitLine"><span class="demo" data-value="100%"></span></div>
+            <div class="progressBar"><i></i><i></i></div>
+            <div class="r data"><span class="text">115%</span></div>
+          </div>
+        </li>
+        <li class="flex">
+          <div class="l">Slope</div>
+          <div class="c progressBox">
+            <div class="splitLine"><span class="demo" data-value="100%"></span></div>
+            <div class="progressBar"><i></i><i></i></div>
+            <div class="r data"><span class="text">154%</span></div>
+          </div>
+        </li>
+        <li class="flex">
+          <div class="l">0~Max</div>
+          <div class="c progressBox">
+            <div class="splitLine"><span class="demo" data-value="100%"></span></div>
+            <div class="progressBar"><i></i><i></i></div>
+            <div class="r data"><span class="text">130%</span></div>
+          </div>
+        </li>
+        <li class="flex">
+          <div class="l">&nbsp;</div>
+          <div class="c progressBox">
+            <div class="splitLine"><span class="title">Class 3 Limit</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{%- style -%}
+
+{%- endstyle -%}
+
+
+{% schema %}
+{
+  "name": "A1 Section 5",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+
+
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Param",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "参数名称"
+        },
+        {
+          "type": "text",
+          "id": "default_value",
+          "label": "默认参数值"
+        },
+        {
+          "type": "text",
+          "id": "offroad_value",
+          "label": "offroad参数值"
+        },
+        {
+          "type": "text",
+          "id": "offroad_percentage",
+          "label": "offroad参数百分比"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A1 Section 5"
+    }
+  ]
+}
+{% endschema %}

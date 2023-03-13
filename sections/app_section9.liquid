@@ -1,0 +1,295 @@
+<div class="app-section9" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color}};{% endif %}">
+ 
+  <div class = "con-box">
+
+    <div class="l" >
+       {%- if section.settings.left_img != blank -%}
+        <img
+          srcset= "{{ section.settings.left_img | img_url: 'master' }}"
+          src="{{ section.settings.left_img | img_url: 'master' }}"
+          alt="{{ section.settings.left_img.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+
+      <div class="child-con-box">
+        {%- if section.settings.left_title != blank -%}
+          <h1>
+            {{ section.settings.left_title | escape }}
+          </h1>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <p>
+            {{ section.settings.description | escape }}
+          </p>
+        {%- endif -%}
+      </div>
+     
+    </div>
+
+    <div class="r">
+      {%- if section.settings.right_img != blank -%}
+        <img
+          class="pc-show"
+          srcset= "{{ section.settings.right_img | img_url: 'master' }}"
+          src="{{ section.settings.right_img | img_url: 'master' }}"
+          alt="{{ section.settings.right_img.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+
+      {%- if section.settings.right_img_mobile != blank -%}
+        <img
+          class="mobile-show"
+          srcset= "{{ section.settings.right_img_mobile | img_url: 'master' }}"
+          src="{{ section.settings.right_img_mobile | img_url: 'master' }}"
+          alt="{{ section.settings.right_img_mobile.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+    </div>
+
+   </div>
+</div>
+
+{%- style -%}
+
+  /* ----------APP Section 9---------- */
+  .app-section9{padding-bottom:12rem;padding-top:12rem;}
+  .app-section9 .top-title{width:89.6%;margin: 0 auto;padding: 5rem 0;}
+  .app-section9 .top-title h1{font-family:EurostileNextW1G-WideSmBd}
+  .app-section9 .con-box{width:89.6%;margin: 0 auto;display: flex;}
+  .app-section9 .con-box .l img{margin-top:2rem;padding-bottom: 5%;}
+  .app-section9 .con-box .l{width: 50%;text-align: left;position: relative;}
+  .app-section9 .con-box h1{font-family: EurostileNextW1G-WideSmBd;text-transform:uppercase;padding-bottom: 3.6rem;margin-bottom: 4rem;}
+  .app-section9 .con-box p{font-family: HarmonyOS_Sans_Regular;max-width: 90%;text-align: left;}
+  .app-section9 .con-box .r{width:50%;margin-left:auto;position:relative;text-align:right;padding: 0px 13% 0 13%;}
+   .app-section9 img{width:100%;
+  vertical-align:middlel;
+  object-fit:cover;}
+
+  @media (min-width: 767px) {
+
+    .mobile-show{display:none}
+
+    .app-section9 .top-title h1{
+      color: {{ section.settings.txt_color }};
+    }
+    .app-section9 .l h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+      color: {{ section.settings.txt_color }};
+      border-bottom:solid 0.1rem {{ section.settings.line_color }};
+      margin-bottom:2rem;
+    }
+    .app-section9 .l p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+      color: {{ section.settings.txt_color }};
+    }
+    .app-section9 .con-box{
+      display: flex;
+      justify-content: space-around;
+      
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+      .app-section9{padding-bottom:10rem;padding-top:5rem;}
+    
+    .pc-show{display:block}
+    .mobile-show{display:none}
+
+    .app-section9 .con-box .l{ width: 50% !important;text-align: left;margin-left: auto;position: relative;}
+    .app-section9 .con-box .l img{ display:none }
+    .app-section9 .con-box .l .child-con-box{ margin-left: 0 !important; text-align: left;}
+    .app-section9 .con-box h1{ text-align: right;font-size:2rem;padding:0 0 2rem 0;;margin-bottom:2rem;border-bottom: 1px solid;line-height: 2.8rem; }
+    .app-section9 .con-box p{ max-width: 100%; text-align: right; color:#000000;font-size:1.5rem;line-height:2rem; }
+    .app-section9 .con-box .r{ position: absolute;width: 45%;padding: 0;margin-left: 0;text-align: left;}
+    .app-section9 .con-box .r img{ max-width: 80%; }
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "APP Section 9",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "left_title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "left_title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "left_title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "left_title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "横线颜色"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_img",
+      "label": "左边图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_img",
+      "label": "右边图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_img_mobile",
+      "label": "手机端右边图片"
+    }
+  ],
+  "presets": [
+    {
+      "name": "APP Section 9"
+    }
+  ]
+}
+{% endschema %}

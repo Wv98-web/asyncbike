@@ -1,0 +1,145 @@
+/* SECTION VIDEO BANNER */
+.section-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* object-fit: cover; */
+}
+
+.section-video .video-header h1 {
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'EurostileNextW1G-WideSmBd';
+}
+
+.section-video .video-header p {
+    line-height: 1.4;
+    font-family: 'HarmonyOS_Sans_Regular';
+}
+
+.section-video .video-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    z-index: 0;
+}
+
+@media screen and (min-width: 767px) {
+    .section-video .video-header {
+        position: absolute;
+    }
+
+    .section-video .video-header p {
+        max-width: 60%;
+        margin-top: 1rem;
+        margin-left: auto;
+    }
+
+    .section-video video.myVideo {
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-image: none;
+        background-position: center center;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-video {
+        min-height: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .section-video::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .section-video::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    .section-video .video-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-video .video-header h1 {
+        max-width: 90%;
+        margin-top: 2rem;
+    }
+
+    .section-video .video-header p {
+        max-width: 90%;
+        margin-top: 2rem;
+    }
+
+    .section-video .myVideo-wrapper {
+        width: 100%;
+        position: relative;
+        padding: 0 1.5rem;
+    }
+
+    .section-video .myvideo-txt {
+        font-family: 'HarmonyOS_Sans_Regular';
+        padding: 0 3rem;
+    }
+
+    .section-video video.myVideo {
+        width: 100%;
+        background-size: 100% 100%;
+        background-image: none;
+        background-position: center center;
+        background-size: contain;
+        object-fit: contain;
+    }
+
+    .section-video .video-loadmore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-video .video-loadmore .video-logo img {
+        width: 6rem;
+    }
+
+    .section-video .video-loadmore .video-jiantou {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .section-video .video-loadmore .video-jiantou img {
+        width: 1.4rem;
+    }
+
+    .section-video .video-loadmore .video-more-txt {
+        font-family: 'HarmonyOS_Sans_Regular';
+    }
+}

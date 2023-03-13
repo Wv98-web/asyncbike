@@ -1,0 +1,169 @@
+<div class="a1-section18">
+
+  <div class="top-title">
+    {%- if section.settings.title != blank -%}
+      <h1>
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+  </div>
+
+  <div class="con-box">
+    {%- if section.blocks.size > 0 -%}
+      <div class="a1-section18-swiper swiper">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            <div class="swiper-slide">
+              {%- if block.settings.swiper_image != blank -%}
+                <img
+                    srcset= "{{ block.settings.swiper_image | img_url: 'master' }}"
+                    src="{{ block.settings.swiper_image | img_url: 'master' }}"
+                    alt="{{ block.settings.swiper_image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.swiper_image.width }}"
+                    height="{{ block.settings.swiper_image.height }}" />
+              {%- else -%}
+                <img
+                    src="http://dummyimage.com/1000x475"
+                    alt=""
+                    loading="lazy"
+                    width=""
+                    height="" />
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="swiper-button-wrap">
+          <div class="swiper-button-prev">
+            <img srcset="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/a1-section16-l.png?v=1677132049" src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/a1-section16-l.png?v=1677132049" alt="" loading="lazy" width="" height="" />
+          </div>
+          <div class="swiper-button-next">
+            <img srcset="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/a1-section16-r.png?v=1677132049" src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/a1-section16-r.png?v=1677132049" alt="" loading="lazy" width="" height="" />
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+  
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .a1-section18 .top-title h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+   
+  }
+
+{%- endstyle -%}
+
+<script>
+  var a1Swiper = new Swiper('.a1-section18-swiper',{
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: true,
+    breakpoints: { 
+      320: {  //当屏幕宽度大于等于320
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      768: {  //当屏幕宽度大于等于768 
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      1280: {  //当屏幕宽度大于等于1280
+        slidesPerView: 5,
+        spaceBetween: 10
+      }
+    },
+    /*autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },*/
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    observer: true,
+    observeParents: true
+  });
+</script>
+
+{% schema %}
+{
+  "name": "A1 Section 18",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "swiper_image",
+          "label": "Swiper image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A1 Section 18"
+    }
+  ]
+}
+{% endschema %}

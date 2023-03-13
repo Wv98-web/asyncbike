@@ -1,0 +1,32 @@
+.footer {
+  background-image:  url("https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/Background_STYLE_STYLE2.png?v=1676441472");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .footer {padding-bottom:3rem;}
+}
+
+.footer-top{margin: 0% auto;width: 89.6%;padding: 2.5% 0}
+.footer-top .l{width: 60%}
+.footer-top .l .item{width: 25%}
+.footer-top h2{font-size: 2.7rem;color: #97979C}
+.footer-top .l .flogo{width: 32.4rem;}
+.footer-top a{font-size: 1.8rem;color: #fff}
+
+.footer-top .r{width: 30%;margin-left: auto}
+.footer-top .r .field-wrapper .field{border-bottom: solid 0.1rem #ffffff;}
+.footer-top .r .field-wrapper .field .field__input{background: none;color: #737373;font-size: 1.8em;}
+.footer-top .r .field-wrapper .field .button{background: none;color: #ffffff;font-size: 2rem;border: none}
+.footer-top .r .field-wrapper .field .button:hover{background: none;border: none}
+.footer-top .r .field-wrapper .field .button:before{border: none}
+.footer-top .r .tips{color: #737373;font-size: 1.5}
+.footer-top .share-link{margin-top: 1.8rem;}
+.footer-top .share-link a{margin-left: 0.5rem;}
+
+.footer-bottom{margin: 0% auto;width: 89.6%;padding-bottom: 2.5%;text-align: right}
+.footer-bottom a,.footer-bottom span{color: #ffffff;font-size: 1.5rem;font-weight: bold;margin-left: 10%;}
+
+

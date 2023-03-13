@@ -1,0 +1,435 @@
+<div class="a1-section1" style="background-color: {{ section.settings.bg_color }};">
+
+  <div class="con-box">
+
+    {%- if section.settings.subtitle != blank -%}
+      <h2 style="color: {{ section.settings.txt_color }};">
+        {{ section.settings.subtitle | escape }}
+      </h2>
+    {%- endif -%}
+
+    {%- if section.settings.title != blank -%}
+      <h1 style="color: {{ section.settings.txt_color }};">
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <div class="des">
+        <p style="color: {{ section.settings.txt_color }};float: {{ section.settings.txt_align }}">
+          {{ section.settings.description }}
+        </p>
+        <div style="clear: both">&nbsp;</div>
+      </div>
+    {%- endif -%}
+    <div class="link-box">
+      <a href="#videoWindow" id="btn_play" style="color: {{ section.settings.txt_color }};">Full video <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/icon-arrow.png?v=1676528856" /> </a>
+      <a href="#videoWindow" id="mobile_btn_play" style="color: {{ section.settings.txt_color }};">Full video <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/icon-arrow.png?v=1676528856" /> </a>
+     
+      <a href="{{ section.settings.order_now_url }}" target="_blank" style="color: {{ section.settings.txt_color }};">Learn more<img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/icon-arrow.png?v=1676528856" /></a>
+    </div>
+  </div>
+
+  <div class="model-box">
+    {%- if section.settings.model_title != blank -%}
+      <p style="color: {{ section.settings.txt_color }};">
+        {{ section.settings.model_title | escape }}
+      </p>
+    {%- endif -%}
+    {%- if section.settings.model != blank -%}
+      <h1 style="color: {{ section.settings.txt_color }};">
+        {{ section.settings.model | escape }}
+      </h1>
+    {%- endif -%}
+  </div>
+  
+
+  {%- if section.settings.video_url != blank -%}
+    <video id="video1" class="my-video" {% if section.settings.poster != blank %} poster="{{ section.settings.poster | img_url: 'master' }}"{% endif %} autoplay="autoplay" loop="loop" controlsList="nodownload" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5" muted>
+      <source src={{ section.settings.video_url }} type="video/mp4">
+    </video>
+  {%- endif -%}
+
+  {%- if section.settings.m_video_url != blank -%}
+    <video id="mobile-video1" class="my-video mobile-my-video" {% if section.settings.poster != blank %} poster="{{ section.settings.poster | img_url: 'master' }}"{% endif %} autoplay="autoplay" loop="loop" controlsList="nodownload" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5" muted>
+      <source src={{ section.settings.m_video_url }} type="video/mp4">
+    </video>
+  {%- endif -%}
+
+  {%- if section.settings.full_video_url != blank -%}
+    <video class="pc-full-video" id="fullvideo1" autoplay="autoplay" loop="loop" controlsList="nodownload" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5" muted>
+      <source src={{ section.settings.full_video_url }} type="video/mp4">
+    </video>
+  {%- endif -%}
+
+  {%- if section.settings.full_m_video_url != blank -%}
+    <video class="mobile-full-video" id="fullvideo2" autoplay="autoplay" loop="loop" controlsList="nodownload" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-orientation="h5" muted>
+      <source src={{ section.settings.full_m_video_url }} type="video/mp4">
+    </video>
+  {%- endif -%}
+
+</div>
+
+
+
+{%- style -%}
+  .pc-full-video,.mobile-full-video{display:none}
+  @media (min-width: 767px) {
+
+    .a1-section1 .con-box h2 {
+      font-size: {{ section.settings.subtitle_fs }}rem;
+      line-height: {{ section.settings.subtitle_lh }}rem;
+    }
+
+    .a1-section1 .con-box h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+
+    .a1-section1 .con-box p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+    }
+
+    .a1-section1 .model-box p {
+      font-size: {{ section.settings.model_title_fs }}rem;
+      line-height: {{ section.settings.model_title_lh }}rem;
+    }
+    .a1-section1 .model-box h1 {
+      font-size: {{ section.settings.model_fs }}rem;
+      line-height: {{ section.settings.model_lh }}rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    #video1{display:none}
+    #mobile-video1{display:block}
+
+    #btn_play{display:none}
+    #mobile_btn_play{display:inline}
+  }
+  @media (min-width: 1199px) {
+    #video1{display:block}
+    #mobile-video1{display:none}
+
+    #btn_play{display:inline}
+    #mobile_btn_play{display:none}
+  }
+ 
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "A1 Section 1",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "== Header"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_fs",
+      "label": "副标题文字大小",
+      "default": 3.6,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_fs_mobile",
+      "label": "移动端副标题文字大小",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_lh",
+      "label": "副标题行间距",
+      "default": 3.6,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_lh_mobile",
+      "label": "移动端副标题行间距",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+        "type": "range",
+        "id": "title_fs",
+        "label": "标题文字大小",
+        "default": 6.4,
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+        "type": "range",
+        "id": "title_fs_mobile",
+        "label": "移动端标题文字大小",
+        "default": 2,
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+        "type": "range",
+        "id": "description_fs",
+        "label": "描述文字大小",
+        "default": 2.3,
+        "min": 1,
+        "max": 10,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+        "type": "range",
+        "id": "description_fs_mobile",
+        "label": "移动端描述文字大小",
+        "default": 1.2,
+        "min": 1,
+        "max": 5,
+        "step": 0.1,
+        "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "text",
+      "id": "order_now_url",
+      "label": "Order now 链接地址",
+      "info": "复制链接到此处"
+    },
+    {
+      "type": "header",
+      "content": "== Color"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "rgba(0, 0, 0, 0.4)"
+    },
+    {
+      "type": "range",
+      "id": "bg_filter",
+      "label": "背景模糊",
+      "default": 15,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "== 视频设置"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "视频地址",
+      "info": "在管理后台文件中上传, 获取链接, 复制到此处"
+    },
+    {
+      "type": "text",
+      "id": "m_video_url",
+      "label": "视频地址(移动端)"
+    },
+    {
+      "type": "text",
+      "id": "full_video_url",
+      "label": "全屏视频地址",
+      "info": "在管理后台文件中上传, 获取链接, 复制到此处"
+    },
+    {
+      "type": "text",
+      "id": "full_m_video_url",
+      "label": "手机端全屏视频地址(移动端)"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster",
+      "label": "视频封面"
+    },
+    {
+      "type": "image_picker",
+      "id": "m_poster",
+      "label": "视频封面(移动端)"
+    },
+
+    {
+      "type": "header",
+      "content": "== 型号"
+    },
+    {
+      "type": "text",
+      "id": "model_title",
+      "label": "型号标题"
+    },
+    {
+      "type": "range",
+      "id": "model_title_fs",
+      "label": "型号标题文字大小",
+      "default": 1.9,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "model_title_fs_mobile",
+      "label": "移动端型号标题文字大小",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "model_title_lh",
+      "label": "型号标题行间距",
+      "default": 3.6,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "model_title_lh_mobile",
+      "label": "移动端型号标题行间距",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "text",
+      "id": "model",
+      "label": "型号"
+    },
+    {
+      "type": "range",
+      "id": "model_fs",
+      "label": "型号文字大小",
+      "default": 12,
+      "min": 10,
+      "max": 20,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "model_fs_mobile",
+      "label": "移动端型号文字大小",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "model_lh",
+      "label": "型号行间距",
+      "default": 12,
+      "min": 10,
+      "max": 20,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "model_lh_mobile",
+      "label": "移动端型号行间距",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+  ],
+  "presets": [
+    {
+      "name": "A1 Section 1"
+    }
+  ]
+}
+{% endschema %}

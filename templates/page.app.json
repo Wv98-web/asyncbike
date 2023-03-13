@@ -1,0 +1,332 @@
+{
+  "layout": "v2",
+  "sections": {
+    "section1": {
+      "type": "app_section1",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/1._055A2387.png",
+        "title": "Smart bike, Fabulous ride",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "With logistics taken care of by ASYNC intelligence, A1 truly becomes an extension of your body and mind.",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section2": {
+      "type": "app_section2",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/1._055A2066.png",
+        "app_img": "shopify:\/\/shop_images\/70_2x_6f309d47-7c27-4431-ae1c-d6f1a7c0b646.png",
+        "title": "ASYNC APP",
+        "title_fs": 6.2,
+        "title_fs_mobile": 2.4,
+        "title_lh": 6.2,
+        "title_lh_mobile": 2.4,
+        "description": "The ASYNC APP is an excellent tool to assist you in your daily rides, allowing easy locking and unlocking of the vehicle, adjusting the power level, controlling the lights, tracking your bike's location, navigating to your desired destination and checking your cycling data.",
+        "description_fs": 3.2,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.9,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section3": {
+      "type": "app_section3",
+      "settings": {
+        "title": "CONTACT YOUR PHONE",
+        "title_fs": 6.2,
+        "title_fs_mobile": 2.4,
+        "title_lh": 10,
+        "title_lh_mobile": 2.4,
+        "txt_color": "#ffffff",
+        "bg_color": "#222222",
+        "txt_align": "right"
+      }
+    },
+    "section4": {
+      "type": "app_section4",
+      "blocks": {
+        "s1": {
+          "type": "button",
+          "settings": {
+            "title": "Digital Key",
+            "title_fs": 4.6,
+            "title_fs_mobile": 2.4,
+            "title_lh": 6,
+            "title_lh_mobile": 2.4,
+            "description": "Unlock your bike and start your ride with a simple tap in the APP. With the digital key setting, you will be the only one who can power it on.",
+            "description_fs": 2.8,
+            "description_fs_mobile": 1.4,
+            "description_lh": 3.8,
+            "description_lh_mobile": 1.4,
+            "txt_color": "#ffffff",
+            "line_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/1._055A2031.png"
+          }
+        },
+        "s2": {
+          "type": "button",
+          "settings": {
+            "title": "Auto Unlock",
+            "title_fs": 4.6,
+            "title_fs_mobile": 2.4,
+            "title_lh": 6,
+            "title_lh_mobile": 2.4,
+            "description": "With the auto unlock setting, your bike, sensing your approaching, automatically unlocks itself. Just power on and get going.",
+            "description_fs": 2.8,
+            "description_fs_mobile": 1.4,
+            "description_lh": 3.8,
+            "description_lh_mobile": 1.4,
+            "txt_color": "#ffffff",
+            "line_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/SAM_5484.png"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2"
+      ],
+      "settings": {
+        "bg_color": "#222222"
+      }
+    },
+    "section5": {
+      "type": "app_section5",
+      "settings": {
+        "bg_color": "#222222",
+        "app_img": "shopify:\/\/shop_images\/1_3d1bb46b-0a7d-4288-8284-e4a7a0e4bd98.png",
+        "title": "Switching Mode",
+        "title_fs": 4.6,
+        "title_fs_mobile": 2.4,
+        "title_lh": 6,
+        "title_lh_mobile": 2.4,
+        "description": "Adapt to various riding conditions by switching mode. Choose eco\/normal\/sport as well as going off-road.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1.4,
+        "line_color": "#ffffff",
+        "txt_color": "#ffffff",
+        "bg_img": "shopify:\/\/shop_images\/20230310140040.png",
+        "app_img1": "shopify:\/\/shop_images\/20230310140040.png",
+        "title1": "Light Control",
+        "title_fs1": 4.6,
+        "title_fs_mobile1": 2.4,
+        "title_lh1": 6,
+        "title_lh_mobile1": 2.4,
+        "description1": "You can remotely control the vehicle's headlights through the APP.",
+        "description_fs1": 2.6,
+        "description_fs_mobile1": 1.4,
+        "description_lh1": 3.8,
+        "description_lh_mobile1": 1.4,
+        "line_color1": "#ffffff",
+        "txt_color1": "#ffffff"
+      }
+    },
+    "section6": {
+      "type": "app_section6",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/1._055A2037_6ac99084-1fe1-4551-8c63-17b56956169d.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section7": {
+      "type": "app_section7",
+      "settings": {
+        "bg_color": "#eeeeee",
+        "title": "ALONG FOR THE RIDE",
+        "title_fs": 6.2,
+        "title_fs_mobile": 1.9,
+        "title_lh": 10,
+        "title_lh_mobile": 1.5,
+        "left_title": "Plan The Best Route",
+        "left_title_fs": 4.6,
+        "left_title_fs_mobile": 1.2,
+        "left_title_lh": 6,
+        "left_title_lh_mobile": 1,
+        "description": "With the ASYNC App, you can plan your route based on your preferences. The App also reminds you of remaining battery power and estimated mileage to prevent unexpected power outage.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1,
+        "line_color": "#707070",
+        "txt_color": "#000000",
+        "left_img": "shopify:\/\/shop_images\/1._055A2562.png",
+        "right_img": "shopify:\/\/shop_images\/93527cde8c53867c7b19dfa165c8656e_a5064d42-06f9-486f-9484-199c15e9bd43.png"
+      }
+    },
+    "section8": {
+      "type": "app_section8",
+      "settings": {
+        "bg_color": "#eeeeee",
+        "left_title": "Navigation Info In Detail",
+        "left_title_fs": 4.6,
+        "left_title_fs_mobile": 1.2,
+        "left_title_lh": 6,
+        "left_title_lh_mobile": 2.4,
+        "description": "Display detailed navigation information, including turns, remaining distance, estimated arrival time, etc. All this info can be displayed on the dashboard. Simple and nice.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1.4,
+        "line_color": "#707070",
+        "txt_color": "#000000",
+        "right_img": "shopify:\/\/shop_images\/front_screen_2.png"
+      }
+    },
+    "section9": {
+      "type": "app_section9",
+      "settings": {
+        "bg_color": "#eeeeee",
+        "title": "",
+        "title_fs": 4.6,
+        "title_fs_mobile": 1.2,
+        "title_lh": 6,
+        "title_lh_mobile": 2.4,
+        "left_title": "Riding Record",
+        "left_title_fs": 4.6,
+        "left_title_fs_mobile": 1.2,
+        "left_title_lh": 6,
+        "left_title_lh_mobile": 2.4,
+        "description": "Record riding information for each trip, such as distance traveled, time taken, average speed and more.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1.4,
+        "line_color": "#707070",
+        "txt_color": "#000000",
+        "left_img": "shopify:\/\/shop_images\/24.png",
+        "right_img": "shopify:\/\/shop_images\/9d3122740a7a6326215f7293b48b18bc.png",
+        "right_img_mobile": "shopify:\/\/shop_images\/9d3122740a7a6326215f7293b48b18bc.png"
+      }
+    },
+    "section10": {
+      "type": "app_section10",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/I85A5420.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "a2f08215-6ba5-47a5-80dd-c1aa4a11566f": {
+      "type": "app_section3",
+      "settings": {
+        "title": "STAY SAFE",
+        "title_fs": 6.2,
+        "title_fs_mobile": 1.2,
+        "title_lh": 10,
+        "title_lh_mobile": 2.4,
+        "txt_color": "#ffffff",
+        "bg_color": "#222222",
+        "txt_align": "left"
+      }
+    },
+    "section11": {
+      "type": "app_section11",
+      "settings": {
+        "bg_color": "#222222",
+        "left_title": "Find My Bike",
+        "left_title_fs": 4.6,
+        "left_title_fs_mobile": 1.2,
+        "left_title_lh": 6,
+        "left_title_lh_mobile": 2.4,
+        "description": "Whether near or far, you'll be able to locate your bike at all times with GPS tracking. Can't find your bike, pinpoint its exact location with the App.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1.4,
+        "line_color": "#ffffff",
+        "txt_color": "#ffffff",
+        "left_img": "shopify:\/\/shop_images\/f7cad14db2319c934a0ddc04bbacd525.png",
+        "right_img": "shopify:\/\/shop_images\/1._055A2409.png"
+      }
+    },
+    "section12": {
+      "type": "app_section12",
+      "settings": {
+        "bg_color": "#222222",
+        "line_color": "#ffffff",
+        "txt_color": "#ffffff",
+        "bg_img": "shopify:\/\/shop_images\/FOR_UI.png",
+        "app_img": "shopify:\/\/shop_images\/f6468d7cbba234141c8fa840f8bc83bf_c66d0893-821d-4796-9fe3-678936bb125d.png",
+        "title": "Vehicle Alarm",
+        "title_fs": 4.6,
+        "title_fs_mobile": 2.4,
+        "title_lh": 6,
+        "title_lh_mobile": 2.4,
+        "description": "When the vehicle topples or moves abnormally, you will be notified promptly. Put your mind at rest.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "007083a1-66fb-416f-a089-cdac6739a2cb": {
+      "type": "app_section3",
+      "settings": {
+        "title": "PERSONAL CENTER & NEWS",
+        "title_fs": 6.2,
+        "title_fs_mobile": 1.2,
+        "title_lh": 10,
+        "title_lh_mobile": 2.4,
+        "txt_color": "#000000",
+        "bg_color": "#EEEEEE",
+        "txt_align": "left"
+      }
+    },
+    "section14": {
+      "type": "app_section14",
+      "settings": {
+        "bg_color": "#eeeeee",
+        "description": "Get updated on the latest news about riding conditions, policies, etc. on the news page.",
+        "description_fs": 2.6,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.8,
+        "description_lh_mobile": 1.4,
+        "line_color": "#707070",
+        "txt_color": "#000000",
+        "left_img": "shopify:\/\/shop_images\/8db690d68e7120b7b067060e79cf3c4c.png",
+        "right_img": "shopify:\/\/shop_images\/2._055A2814_dc2e2d6f-659a-4cff-aadd-92d7bbd77002.png"
+      }
+    }
+  },
+  "order": [
+    "section1",
+    "section2",
+    "section3",
+    "section4",
+    "section5",
+    "section6",
+    "section7",
+    "section8",
+    "section9",
+    "section10",
+    "a2f08215-6ba5-47a5-80dd-c1aa4a11566f",
+    "section11",
+    "section12",
+    "007083a1-66fb-416f-a089-cdac6739a2cb",
+    "section14"
+  ]
+}

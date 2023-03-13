@@ -1,0 +1,287 @@
+<div class="a1-section11">
+  <div class="top-title">
+    {%- if section.settings.title != blank -%}
+      <h1>
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <p>
+        {{ section.settings.description | escape }}
+      </p>
+    {%- endif -%}
+  </div>
+
+  <div class="con-box">
+    <div class="l">
+      {%- if section.settings.left_img != blank -%}
+        <img
+          srcset="{{ section.settings.left_img | img_url: 'master' }}"
+          src="{{ section.settings.left_img | img_url: 'master' }}"
+          alt="{{ section.settings.left_img.alt | escape }}"
+          loading="lazy" />
+      {%- endif -%}
+    </div>
+    <div class="r">
+        <div>
+          {%- if section.settings.right_title != blank -%}
+          <h1>
+            {{ section.settings.right_title | escape }}
+          </h1>
+          {%- endif -%}
+          {%- if section.settings.right_description != blank -%}
+            <div class="des">
+              <p>{{ section.settings.right_description | escape }}</p>
+              <p>AC / DC</p>
+            </div>
+          {%- endif -%}
+        </div>
+        <div>
+          <h1>
+            battery fast charge
+          </h1>
+          <div class="des">
+            <p>
+              Fully charged in two hours
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .a1-section11 .top-title h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+    .a1-section11 .top-title p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;}
+    }
+
+
+
+    .a1-section11 .r  h1 {
+      font-size: {{ section.settings.right_title_fs }}rem;
+      line-height: {{ section.settings.right_title_lh }}rem;
+    }
+    .a1-section11 .r  p {
+      font-size: {{ section.settings.right_description_fs }}rem;
+      line-height: {{ section.settings.right_description_lh }}rem;
+    }
+
+    
+  }
+
+  @media (max-width: 768px) {
+
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "A1 Section 11",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_img",
+      "label": "左侧图片"
+    },
+    
+    
+    {
+      "type": "text",
+      "id": "right_title",
+      "label": "右侧标题"
+    },
+    {
+      "type": "range",
+      "id": "right_title_fs",
+      "label": "右侧标题文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "right_title_fs_mobile",
+      "label": "右侧移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "right_title_lh",
+      "label": "右侧标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "right_title_lh_mobile",
+      "label": "右侧移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "right_description",
+      "label": "右侧描述"
+    },
+    {
+      "type": "range",
+      "id": "right_description_fs",
+      "label": "右侧描述文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "right_description_fs_mobile",
+      "label": "右侧移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "right_description_lh",
+      "label": "右侧描述行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "right_description_lh_mobile",
+      "label": "右侧移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "A1 Section 11"
+    }
+  ]
+}
+{% endschema %}

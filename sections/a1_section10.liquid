@@ -1,0 +1,235 @@
+<div class="a1-section10">
+     <!--div class="l">
+       {%- if section.settings.bg_img != blank -%}
+         <img
+                 srcset="{{ section.settings.bg_img | img_url: 'master' }}"
+                 src="{{ section.settings.bg_img | img_url: 'master' }}"
+                 alt="{{ section.settings.bg_img.alt | escape }}"
+                 loading="lazy"
+         >
+         <div class="moveImg1"></div>
+         <div class="moveImg2"></div>
+       {%- endif -%}
+     </div-->
+
+    <!--动画效果-->
+    <div class="l ani-container">
+    <div class="part1">
+          <div class="sticky-case">
+              <div class="case-inside-container">
+                  <figure class="image-case-inside">
+                      <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/inside.png" class="imgh" />
+                      <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/dc.png" class="imgo" />
+                  </figure>
+              </div>
+          </div>
+          <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/an1_01.png" />
+      </div>
+      <div class="part2"><img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/an1_02.png" /></div>
+      <div class="image-case-handles">
+        <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/handles.png" />
+      </div>
+    </div>
+    <!--动画效果结束-->  
+
+     <div class="r ani-text">
+       {%- if section.settings.title != blank -%}
+         <h1 class="wow fadeIn">
+           {{ section.settings.title | escape }}
+         </h1>
+       {%- endif -%}
+       <div class="desc">
+          <div class="slideup">
+            {%- if section.settings.sub_title != blank -%}
+              <h2>
+                {{ section.settings.sub_title | escape }}
+              </h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+              <p class="slideup">
+                {{ section.settings.description | escape }}
+              </p>
+            {%- endif -%}
+          </div>
+        </div>
+     </div>
+     
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .a1-section10 h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+
+    .a1-section10 h2 {
+      font-size: {{ section.settings.sub_title_fs }}rem;
+      line-height: {{ section.settings.sub_title_lh }}rem;
+    }
+
+    .a1-section10 p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+    }
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "A1 Section 10",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "背景图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "副标题"
+    },
+    {
+      "type": "range",
+      "id": "sub_title_fs",
+      "label": "副标题文字大小",
+      "default": 3.6,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "sub_title_fs_mobile",
+      "label": "移动端副标题文字大小",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "sub_title_lh",
+      "label": "副标题行间距",
+      "default": 3.6,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "sub_title_lh_mobile",
+      "label": "移动端副标题行间距",
+      "default": 2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+
+  ],
+  "presets": [
+    {
+      "name": "A1 Section 10"
+    }
+  ]
+}
+{% endschema %}

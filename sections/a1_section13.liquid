@@ -1,0 +1,334 @@
+<div class="a1-section13">
+  <div class="con-box">
+    <div class="l">
+      {%- if section.settings.left_img != blank -%}
+        <img
+          srcset="{{ section.settings.left_img | img_url: 'master' }}"
+          src="{{ section.settings.left_img | img_url: 'master' }}"
+          alt="{{ section.settings.left_img.alt | escape }}"
+          loading="lazy" />
+      {%- endif -%}
+      <div class="child-con-box">
+        {%- if section.settings.title != blank -%}
+          <h1>
+            {{ section.settings.title | escape }}
+          </h1>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <p>
+            {{ section.settings.description | escape }}
+          </p>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="r">
+      {%- if section.blocks.size > 0 -%}
+        <div class="a1-section13-swiper swiper">
+          <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide">
+                {%- if block.settings.swiper_image != blank -%}
+                  <img
+                    srcset= "{{ block.settings.swiper_image | img_url: 'master' }}"
+                    src="{{ block.settings.swiper_image | img_url: 'master' }}"
+                    alt="{{ block.settings.swiper_image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ block.settings.swiper_image.width }}"
+                    height="{{ block.settings.swiper_image.height }}" />
+                {%- endif -%}
+
+                <div class="child-con-box">
+                  {%- if block.settings.title != blank -%}
+                    <h1 style="font-size: {{ block.settings.title_fs }}rem;line-height:{{ block.settings.title_lh }}rem">
+                      {{ block.settings.title | escape }}
+                    </h1>
+                  {%- endif -%}
+                  {%- if block.settings.description != blank -%}
+                    <p style="font-size: {{ block.settings.description_fs }}rem;line-height:{{ block.settings.description_lh }}rem">
+                      {{ block.settings.description | escape }}
+                    </p>
+                  {%- endif -%}
+                  <a href="{{ block.settings.link }}" target="_blank">Learn more <img src="https://cdn.shopifycdn.net/s/files/1/0618/3256/0794/files/icon-arrow.png?v=1676528856" /></a>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+  
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .a1-section13 .l h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+    .a1-section13 .l p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    
+  }
+
+{%- endstyle -%}
+<script>
+certifySwiper = new Swiper('.a1-section13-swiper', {
+	watchSlidesProgress: true,
+	slidesPerView: 'auto',
+	centeredSlides: true,
+	loop: true,
+	loopedSlides: 3,
+	autoplay: true,
+	pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+})
+</script>
+<script>
+  var a1Swiper = new Swiper('.a1-section13-swiper1',{
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+      spaceBetween: -320,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    observer: true,
+    observeParents: true
+  });
+</script>
+
+{% schema %}
+{
+  "name": "A1 Section 13",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "left_img",
+      "label": "左边图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 6.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Swiper",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "swiper_image",
+          "label": "Swiper image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "range",
+          "id": "title_fs",
+          "label": "标题文字大小",
+          "default": 3.2,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "title_fs_mobile",
+          "label": "移动端标题文字大小",
+          "default": 2,
+          "min": 1,
+          "max": 5,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "title_lh",
+          "label": "标题行间距",
+          "default": 4,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "title_lh_mobile",
+          "label": "移动端标题行间距",
+          "default": 2.4,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "描述"
+        },
+        {
+          "type": "range",
+          "id": "description_fs",
+          "label": "描述文字大小",
+          "default": 2,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "description_fs_mobile",
+          "label": "移动端描述文字大小",
+          "default": 1.2,
+          "min": 1,
+          "max": 5,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "description_lh",
+          "label": "描述行间距",
+          "default": 2.4,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "description_lh_mobile",
+          "label": "移动端描述行间距",
+          "default": 2.4,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "链接"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "A1 Section 13"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,442 @@
+{{ 'h-section-brand.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left: {{ section.settings.padding_left }}px;
+      padding-right: {{ section.settings.padding_right }}px;
+    }
+  }
+
+  .section-{{ section.id }} .brand-block {
+    color: {{ section.settings.txt_color }};
+  }
+
+  .section-{{ section.id }} .brand-block::before {
+    background-color: {{ section.settings.cl_overlay }};
+    -webkit-backdrop-filter: blur({{ section.settings.cl_filter }}px);
+    backdrop-filter: blur({{ section.settings.cl_filter }}px);
+  }
+
+  @media (min-width: 767px) {
+    .section-{{ section.id }} .brand_txt_before p {
+      font-size: {{ section.settings.fs }}rem;
+    }
+
+    .section-{{ section.id }} .brand_txt_after p {
+      font-size: {{ section.settings.h_fs }}rem;
+    }
+
+    .section-{{ section.id }} .brand_txt_after p::first-letter {
+      color: {{ section.settings.highlight_color }};
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-{{ section.id }} .brand_txt_before p {
+      font-size: {{ section.settings.m_fs }}rem;
+    }
+
+    .section-{{ section.id }} .brand_txt_before p::first-letter {
+      color: {{ section.settings.highlight_color }};
+    }
+
+    .section-{{ section.id }} .brand_txt_after p:first-child::first-letter {
+      color: {{ section.settings.highlight_color }};
+    }
+
+    .section-{{ section.id }} .brand_txt_after p {
+      font-size: {{ section.settings.m_fs }}rem;
+    }
+
+    .section-{{ section.id }} .brand_txt_after p:first-child {
+      font-size: {{ section.settings.m_h_fs }}rem;
+    }
+  }
+
+  {% for block in section.blocks %}
+    @media (min-width: 767px) {
+      .brand-block_{{ block.id }} .brand_image_inner::before {
+        background-image: url({{ block.settings.brand_image | img_url: 'master' }});
+      }
+    }
+
+    @media (max-width: 768px) {
+      .brand-block_{{ block.id }} .brand_image_inner::before {
+        {% if block.settings.m_brand_image != blank %}background-image: url({{ block.settings.m_brand_image | img_url: 'master' }});{% else %}background-image: url({{ block.settings.brand_image | img_url: 'master' }});{% endif %}
+      }
+    }
+  {% endfor %}
+{%- endstyle -%}
+
+<div class="brand-section show {% if section.blocks.size >= 3 %} blockSize3{% elsif section.blocks.size <=2 %} blockSize2{% endif %} isolate{% unless section.settings.full_width %} page-width{% endunless %} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }} section-{{ section.id }}-padding">
+  {%- for block in section.blocks -%}
+    <div class="brand-block js_brand_click brand-block_{{ block.id }} brand_image_mask-{{ block.settings.mask_position }} m_brand_image_mask-{{ block.settings.m_mask_position }}">
+      <div class="brand_image_inner"></div>
+      <div class="brand_word brand_word-{{ block.settings.word_position }}">
+        <img
+          srcset="{{ block.settings.word_image | img_url: 'master' }}"
+          src="{{ block.settings.word_image | img_url: 'master' }}"
+          alt="{{ block.settings.word_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.word_image.width }}"
+          height="{{ block.settings.word_image.height }}"
+        >
+      </div>
+      <div class="brand_txt_before {% if block.settings.txt_align != blank %}align_{{ block.settings.txt_align }}{% endif %} pa_txts h_pos{{ block.settings.cap_h_pos }} v_pos{{ block.settings.cap_v_pos }}">
+        <p>{{ block.settings.short_info }}</p>
+      </div>
+      <div class="brand_txt_after">
+        <p>{{ block.settings.full_info }}</p>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+<div class="brand-section m_show {% if section.blocks.size >= 3 %} blockSize3{% elsif section.blocks.size <=2 %} blockSize2{% endif %} isolate{% unless section.settings.full_width %} page-width{% endunless %} color-{{ section.settings.color_scheme }} gradient section-{{ section.id }} section-{{ section.id }}-padding">
+  {%- for block in section.blocks -%}
+    <div class="brand-block js_brand_click brand-block_{{ block.id }} brand_image_mask-{{ block.settings.mask_position }} m_brand_image_mask-{{ block.settings.m_mask_position }}">
+      <div class="brand_image_inner"></div>
+      <div class="brand_word brand_word-{{ block.settings.word_position }}">
+        <img
+          srcset="{{ block.settings.word_image | img_url: 'master' }}"
+          src="{{ block.settings.word_image | img_url: 'master' }}"
+          alt="{{ block.settings.word_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.word_image.width }}"
+          height="{{ block.settings.word_image.height }}"
+        >
+      </div>
+      <div class="brand_txt_before {% if block.settings.txt_align != blank %}align_{{ block.settings.txt_align }}{% endif %} pa_txts h_pos{{ block.settings.cap_h_pos }} v_pos{{ block.settings.cap_v_pos }}">
+        <p>{{ block.settings.full_info }}</p>
+      </div>
+      <div class="brand_txt_after">
+        <p>{{ block.settings.full_info }}</p>
+        <p>{{ block.settings.short_info }}</p>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Brand",
+  "tag": "section",
+  "class": "section fp-auto-height",
+  "settings": [
+    {
+      "type": "header",
+      "content": "== Color"
+    },
+    {
+      "type": "color",
+      "id": "txt_color",
+      "label": "文字颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "高亮颜色",
+      "default": "#FF4F00"
+    },
+    {
+      "type": "color_background",
+      "id": "cl_overlay",
+      "label": "遮罩背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "cl_filter",
+      "label": "遮罩背景高斯模糊",
+      "default": 15,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "== TEXT"
+    },
+    {
+      "type": "range",
+      "id": "fs",
+      "label": "文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "m_fs",
+      "label": "文字大小(移动端)",
+      "default": 1.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "h_fs",
+      "label": "滑入文字大小",
+      "default": 3,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "m_h_fs",
+      "label": "滑入文字大小(移动端)",
+      "default": 1.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "header",
+      "content": "== LAYOUT"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "SECTION PADDING",
+      "info": "只用于PC端"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Left padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Right padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "abc",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "header",
+          "content": "== TEXT"
+        },
+        {
+          "type": "textarea",
+          "id": "short_info",
+          "label": "描述",
+          "default": "LOREM IPSUM DOLOR SIT AMET, CONSETETUR SADIPSCING ELITR"
+        },
+        {
+          "type": "textarea",
+          "id": "full_info",
+          "label": "详细描述",
+          "default": "Aorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"
+        },
+        {
+          "type": "select",
+          "id": "txt_align",
+          "options": [
+            {
+              "group": "right",
+              "value": "right",
+              "label": "右"
+            },
+            {
+              "group": "center",
+              "value": "center",
+              "label": "居中"
+            },
+            {
+              "group": "left",
+              "value": "left",
+              "label": "左"
+            }
+          ],
+          "label": "对齐方式",
+          "default": "right"
+        },
+        {
+          "type": "range",
+          "id": "cap_v_pos",
+          "label": "Content vertical position",
+          "info": " <= 50: Top position , > 50 bottom position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_h_pos",
+          "label": "Content horizontal position",
+          "info": " <= 50: Left position , > 50 right position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "header",
+          "content": "== Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "word_image",
+          "label": "字母图片"
+        },
+        {
+          "type": "image_picker",
+          "id": "brand_image",
+          "label": "背景图片"
+        },
+        {
+          "type": "image_picker",
+          "id": "m_brand_image",
+          "label": "背景图片(移动端)"
+        },
+        {
+          "type": "header",
+          "content": "== 模块各部分位置设置"
+        },
+        {
+          "type": "select",
+          "id": "mask_position",
+          "options": [
+            {
+              "group": "right",
+              "value": "right",
+              "label": "右"
+            },
+            {
+              "group": "left",
+              "value": "left",
+              "label": "左"
+            }
+          ],
+          "label": "遮罩位置",
+          "default": "right"
+        },
+        {
+          "type": "select",
+          "id": "m_mask_position",
+          "options": [
+            {
+              "group": "right",
+              "value": "right",
+              "label": "右"
+            },
+            {
+              "group": "left",
+              "value": "left",
+              "label": "左"
+            }
+          ],
+          "label": "遮罩位置(移动端)",
+          "default": "right"
+        },
+        {
+          "type": "select",
+          "id": "word_position",
+          "options": [
+            {
+              "group": "right",
+              "value": "right",
+              "label": "右"
+            },
+            {
+              "group": "left",
+              "value": "left",
+              "label": "左"
+            }
+          ],
+          "label": "字母图片位置",
+          "info": "仅PC端设置",
+          "default": "right"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand"
+    }
+  ]
+}
+{% endschema %}

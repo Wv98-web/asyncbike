@@ -1,0 +1,77 @@
+
+.float-newsletter{z-index: 10000;}
+.float-newsletter h2,.float-newsletter p{color: #ffffff}
+.float-newsletter-form{width: 100%}
+.float-newsletter .form-sub input{width: 42rem;border: none;font-size: 1.4rem;border-bottom: solid 0.1rem #fff;flex-grow: unset;margin: 0;color: #ffffff;background:none;height: 3.6rem;line-height: 3.6rem;}
+.float-newsletter .form-sub input:focus-visible{border: none;box-shadow: none;border-bottom: solid 0.1rem #fff; }
+.float-newsletter .form-sub button{background: none;font-size: 1.7rem;color: #ff4f00;border: none; background: none;margin-left: -10.5rem}
+
+@media (min-width: 768px) {
+    .float-newsletter{position: fixed;bottom: 0;left: 0;width: 100%;background: #000000;color: #ffffff;}
+    .float-newsletter .form-success{text-align: center;line-height: 6rem;font-size: 2rem;}
+    .float-newsletter .newsletter-heading,.float-newsletter .newsletter-sub-heading{display: none}
+    .float-newsletter .form-sub{text-align: center;}
+    .float-newsletter .form-sub .field-box{padding: 1rem 0}
+    .float-newsletter .form-sub .newsletter-sub-heading-pc{font-size: 1.7rem;margin-right: 4rem}
+
+    .email-btn{display: none}
+}
+
+@media (max-width: 768px) {
+
+    .float-newsletter.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .float-newsletter{
+        -webkit-transform: translate(104%, 0);
+        transform: translate(104%, 0);
+        transition: transform 1s;
+        z-index: 60;
+        position: fixed;
+        bottom: 10rem;
+        right: 0;
+        width: 26.2rem;
+        height: 13.5rem;
+        opacity: 1;
+        border-radius: 4px 0px 0px 4px;
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(60px);
+        padding: 1.33rem 0 0 1.67rem;
+    }
+
+    .float-newsletter .form-sub input{width: 22.9rem;height: 3rem;line-height: 3rem;}
+    .float-newsletter .field-box{position: relative}
+    .float-newsletter .form-sub button{position: absolute;right: 1.33rem;top: 1rem;font-size: 1.2rem;}
+
+    .float-newsletter .form-success{font-size: 1.5rem;color: #fff;}
+    .float-newsletter .newsletter-heading{font-size: 1.4rem;}
+    .float-newsletter .newsletter-sub-heading{font-size: 1rem;padding: 0;margin: 1rem 0 0;line-height: 1.4rem}
+
+    .email-btn {
+        
+        z-index: 100;
+        position: fixed;
+        bottom: 10rem;
+        right: 0;
+        color: #fff;
+        transition: all 1s;
+        transform: translateX(0);
+        backdrop-filter: blur(5px);
+        width: 4rem;
+        height: 4rem;
+        opacity: 1;
+        border-radius: 4px 0px 0px 4px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .email-btn svg{
+        width: 3rem;
+        height: 2.8rem;
+        margin: 0.6rem 0 0 0.5rem;
+    }
+
+    .float-newsletter .form-sub .newsletter-sub-heading-pc{display: none}
+
+}

@@ -1,0 +1,152 @@
+{{ 'h_timeline.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-left: {{ section.settings.padding_left | times: 0.75 | round: 0 }}px;
+    padding-right: {{ section.settings.padding_right | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      padding-left: {{ section.settings.padding_left }}px;
+      padding-right: {{ section.settings.padding_right }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="team-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }} section-{{ section.id }}-padding">
+
+  <div class="team-section__media">
+
+    {%- if section.blocks.size > 0 -%}
+        <div class="team_swiper swiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {%- if block.settings.image != blank -%}
+                <div class="swiper-slide team-content" style="background-image: url({{ block.settings.image | img_url: 'master' }}); background-repeat: no-repeat; background-position: center center; background-size: contain;">
+                  <div class="team-title team_txt">
+                      {{ block.settings.title }}
+                  </div>
+                </div>
+              {%- endif -%}
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    {%- endif -%}
+  </div>
+
+</div>
+
+<script>
+  var teamSwiper = new Swiper('.team_swiper',{
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    observer: true,
+    observeParents: true
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Team Banner",
+  "tag": "section",
+  "class": "section removeLess767",
+  "settings": [
+    {
+      "type": "header",
+      "content": "== LAYOUT"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.video.settings.full_width.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "SECTION PADDING",
+      "info": "只用于PC端"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Left padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "label": "Right padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "BANNER图"
+        },
+        {
+          "type": "header",
+          "content": "== Text"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "标题"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team Banner"
+    }
+  ]
+}
+{% endschema %}

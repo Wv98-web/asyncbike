@@ -1,0 +1,107 @@
+/* HarmonyOS_Sans_Regular.ttf
+EurostileNextW1G-Ext.OTF
+EurostileNextW1G-Regular.OTF
+EurostileNextW1G-Wide.OTF
+EurostileNextW1G-WideLt.OTF
+EurostileNextW1G-WideSmBd.OTF
+EurostileNextW1G-WideUltLt.OTF
+HarmonyOS_Sans_Bold.ttf
+HarmonyOS_Sans_Light.ttf */
+
+@font-face {
+    font-family: 'EurostileNextW1G-WideSmBd';
+    src: url('https://cdn.shopify.com/s/files/1/0618/3256/0794/files/EurostileNextW1G-WideSmBd.OTF');
+}
+
+@font-face {
+    font-family: 'EurostileNextW1G-WideUltLt';
+    src: url('https://cdn.shopify.com/s/files/1/0618/3256/0794/files/EurostileNextW1G-WideUltLt.OTF');
+}
+
+
+@font-face {
+    font-family: 'EurostileNextW1G-Wide';
+    src: url('https://cdn.shopify.com/s/files/1/0618/3256/0794/files/EurostileNextW1G-Wide.OTF');
+}
+
+@font-face {
+    font-family: 'HarmonyOS_Sans_Bold';
+    src: url('https://cdn.shopify.com/s/files/1/0618/3256/0794/files/HarmonyOS_Sans_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'HarmonyOS_Sans_Regular';
+    src: url('https://cdn.shopify.com/s/files/1/0618/3256/0794/files/HarmonyOS_Sans_Regular.ttf');
+}
+
+@font-face {
+    font-family: 'HarmonyOS_Sans_Light';
+    src: url('https://cdn.shopify.com/s/files/1/0618/3256/0794/files/HarmonyOS_Sans_Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+video {
+    vertical-align: middle;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* 隐藏video 全屏按钮 */
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+/* 隐藏video 播放按钮 */
+video::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+}
+
+/* 隐藏video 进度条 */
+video::-webkit-media-controls-timeline {
+    display: none !important;
+}
+
+/* 隐藏video 观看的当前时间 */
+video::-webkit-media-controls-current-time-display {
+    display: none !important;
+}
+
+/* 隐藏video 剩余时间 */
+video::-webkit-media-controls-time-remaining-display {
+    display: none !important;
+}
+
+/* 隐藏video 音量按钮 */
+video::-webkit-media-controls-mute-button {
+    display: none !important;
+}
+
+video::-webkit-media-controls-toggle-closed-captions-button {
+    display: none !important;
+}
+
+/* 隐藏video 音量的控制条 */
+video::-webkit-media-controls-volume-slider {
+    display: none !important;
+}
+
+/* 隐藏video 所有控件 */
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: white !important;
+}
+
+.swiper-pagination-bullet {
+    background: #eee !important;
+}

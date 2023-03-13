@@ -1,0 +1,665 @@
+{
+  "layout": "v2",
+  "sections": {
+    "section1": {
+      "type": "a1_section1",
+      "settings": {
+        "subtitle": "",
+        "subtitle_fs": 2.5,
+        "subtitle_fs_mobile": 1.8,
+        "subtitle_lh": 5,
+        "subtitle_lh_mobile": 1.8,
+        "title": "future nomadicism",
+        "title_fs": 4.8,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "Life is uncharted territory. \nExplore your terrain with A1.",
+        "description_fs": 2.1,
+        "description_fs_mobile": 1.4,
+        "description_lh": 2.4,
+        "description_lh_mobile": 1.4,
+        "order_now_url": "",
+        "txt_color": "#ffffff",
+        "bg_color": "#000000",
+        "bg_filter": 0,
+        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f4df6dd3c2a74d41929b34e07799dd8a.mp4",
+        "m_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/f4df6dd3c2a74d41929b34e07799dd8a.mp4",
+        "full_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/259e24c3b8c540a795c4eaeae111bb4b.mp4",
+        "full_m_video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/fb77f0e9d80445389484d1d3cadb51e7.mp4",
+        "m_poster": "shopify:\/\/shop_images\/55.png",
+        "model_title": "MOTORTYPE",
+        "model_title_fs": 1.9,
+        "model_title_fs_mobile": 1.8,
+        "model_title_lh": 3,
+        "model_title_lh_mobile": 1.8,
+        "model": "A1",
+        "model_fs": 12,
+        "model_fs_mobile": 1.8,
+        "model_lh": 12,
+        "model_lh_mobile": 1.8
+      }
+    },
+    "section2": {
+      "type": "a1_section2",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/3.png",
+        "txt": "It's A1.\nPower, stylishness, and endurance. \nA1 is functionality and aesthetics perfected.",
+        "txt_fs": 6.3,
+        "txt_fs_mobile": 4.2,
+        "txt_lh": 6.5,
+        "txt_lh_mobile": 4.5
+      }
+    },
+    "section3": {
+      "type": "a1_section3",
+      "blocks": {
+        "swiper1": {
+          "type": "button",
+          "settings": {
+            "title": "Space orange",
+            "description": "",
+            "swiper_image": "shopify:\/\/shop_images\/63e30c7f4eed839532bc8234.jpg"
+          }
+        },
+        "swiper2": {
+          "type": "button",
+          "settings": {
+            "title": "Moon silver",
+            "description": "",
+            "swiper_image": "shopify:\/\/shop_images\/cmf__-0.png"
+          }
+        },
+        "swiper3": {
+          "type": "button",
+          "settings": {
+            "title": "MORE",
+            "description": "",
+            "swiper_image": "shopify:\/\/shop_images\/cmf__-12.png"
+          }
+        }
+      },
+      "block_order": [
+        "swiper1",
+        "swiper2",
+        "swiper3"
+      ],
+      "settings": {
+        "title_fs": 3.8,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5,
+        "title_lh_mobile": 2.4,
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.4,
+        "description_lh_mobile": 2.4,
+        "pagination_a_color": "#e4683c",
+        "pagination_color": "#b3b3b3"
+      }
+    },
+    "section4": {
+      "type": "a1_section4",
+      "settings": {
+        "title": "phenomenal motor",
+        "title_fs": 5.2,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5.2,
+        "title_lh_mobile": 2.4,
+        "description": "A1's motor delivers power, torque and range to suit every biking occasion.",
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.4,
+        "description_lh_mobile": 2.4,
+        "left_img": "shopify:\/\/shop_images\/Capture055A3874.png",
+        "left_title": "Full throttle on. Let's charge.",
+        "left_title_fs": 3.5,
+        "left_title_fs_mobile": 2.4,
+        "left_title_lh": 3.5,
+        "left_title_lh_mobile": 2.4,
+        "left_description": "",
+        "left_description_fs": 5,
+        "left_description_fs_mobile": 2.4,
+        "left_description_lh": 5,
+        "left_description_lh_mobile": 2.4,
+        "right_img": "shopify:\/\/shop_images\/a1-section4-right.png",
+        "right_title": "You choose the power",
+        "right_title_fs": 1.8,
+        "right_title_fs_mobile": 2.4,
+        "right_title_lh": 3,
+        "right_title_lh_mobile": 2.4,
+        "right_description": "750w for the city. 1200w off-road. 2500w peak. Power is within your control.",
+        "right_description_fs": 1.3,
+        "right_description_fs_mobile": 2.4,
+        "right_description_lh": 1.5,
+        "right_description_lh_mobile": 2.4
+      }
+    },
+    "section5": {
+      "type": "a1_section5",
+      "blocks": {
+        "param1": {
+          "type": "button",
+          "settings": {
+            "name": "POWER",
+            "default_value": "750W",
+            "offroad_value": "1200W",
+            "offroad_percentage": "160"
+          }
+        },
+        "param2": {
+          "type": "button",
+          "settings": {
+            "name": "PEAK TORQUE",
+            "default_value": "50FT-LB",
+            "offroad_value": "71FT-LB",
+            "offroad_percentage": "142"
+          }
+        },
+        "param3": {
+          "type": "button",
+          "settings": {
+            "name": "SPEED",
+            "default_value": "28MPH",
+            "offroad_value": "32MPH",
+            "offroad_percentage": "114"
+          }
+        },
+        "param4": {
+          "type": "button",
+          "settings": {
+            "name": "SLOPE",
+            "default_value": "17.4%",
+            "offroad_value": "26.8%",
+            "offroad_percentage": "154"
+          }
+        },
+        "param5": {
+          "type": "button",
+          "settings": {
+            "name": "0~Max",
+            "default_value": "5″",
+            "offroad_value": "3″",
+            "offroad_percentage": "130"
+          }
+        }
+      },
+      "block_order": [
+        "param1",
+        "param2",
+        "param3",
+        "param4",
+        "param5"
+      ],
+      "settings": {}
+    },
+    "section7": {
+      "type": "a1_section7",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/I85A5512.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section6": {
+      "type": "a1_section6",
+      "settings": {
+        "title": "TO THE STREETS & THE WILDERNESS",
+        "title_fs": 4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5,
+        "title_lh_mobile": 2.4,
+        "description": "A1 is designed to handle any terrain, from city streets to rugged off-road trails.",
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.2,
+        "description_lh_mobile": 2.4,
+        "left_img": "shopify:\/\/shop_images\/76.png",
+        "left_title": "Air-assisted inverted fork front suspension",
+        "left_title_fs": 1.8,
+        "left_title_fs_mobile": 2.4,
+        "left_title_lh": 3,
+        "left_title_lh_mobile": 2.4,
+        "left_description": "Less steering inertia, more responsive handling feel and better compression and rebound dampening. The result? Smoother ride.",
+        "left_description_fs": 1.4,
+        "left_description_fs_mobile": 2.4,
+        "left_description_lh": 1.8,
+        "left_description_lh_mobile": 2.4,
+        "right_img": "shopify:\/\/shop_images\/part_4.png",
+        "right_title": "MONOSHOCK REAR SUSPENSION",
+        "right_title_fs": 1.8,
+        "right_title_fs_mobile": 2.4,
+        "right_title_lh": 3,
+        "right_title_lh_mobile": 2.4,
+        "right_description": "The monoshock absorbs road noise more precisely, bringing riding stability and comfort.",
+        "right_description_fs": 1.4,
+        "right_description_fs_mobile": 2.4,
+        "right_description_lh": 1.8,
+        "right_description_lh_mobile": 2.4,
+        "left_img1": "shopify:\/\/shop_images\/77.png",
+        "left_title1": "Four-piston hydraulic brake",
+        "left_title_fs1": 1.8,
+        "left_title_fs_mobile1": 2.4,
+        "left_title_lh1": 3,
+        "left_title_lh_mobile1": 2.4,
+        "left_description1": "Four-piston brake systems offer greater stopping power, better modulation and a higher level of responsiveness.",
+        "left_description_fs1": 1.4,
+        "left_description_fs_mobile1": 2.4,
+        "left_description_lh1": 1.8,
+        "left_description_lh_mobile1": 2.4,
+        "right_img1": "shopify:\/\/shop_images\/part_3.png",
+        "right_title1": "Fat tires",
+        "right_title_fs1": 1.8,
+        "right_title_fs_mobile1": 2.4,
+        "right_title_lh1": 3,
+        "right_title_lh_mobile1": 2.4,
+        "right_description1": "Fat tires provides more grip on a variety of surfaces, such as loose gravel, sand, and snow, making them ideal for off-road adventures as well as uneven pavement or potholes.",
+        "right_description_fs1": 1.4,
+        "right_description_fs_mobile1": 2.4,
+        "right_description_lh1": 1.8,
+        "right_description_lh_mobile1": 2.4
+      }
+    },
+    "section9": {
+      "type": "a1_section9",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/I85A5830.png",
+        "title": "",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section8": {
+      "type": "a1_section8",
+      "settings": {
+        "title": "Comfort is a must",
+        "title_fs": 4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5,
+        "title_lh_mobile": 2.4,
+        "description": "The bike's frame geometry and the supportive saddle are designed to bring comfort to every riding situation.",
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.2,
+        "description_lh_mobile": 2.4,
+        "left_img": "shopify:\/\/shop_images\/a1-section8-l.png",
+        "left_title": "Ergonomic Frame geometry",
+        "left_title_fs": 1.8,
+        "left_title_fs_mobile": 2.4,
+        "left_title_lh": 3,
+        "left_title_lh_mobile": 2.4,
+        "left_description": "Ride in an ergonomic triangle that keeps you in a relaxed, mostly upright position.",
+        "left_description_fs": 1.4,
+        "left_description_fs_mobile": 2.4,
+        "left_description_lh": 1.8,
+        "left_description_lh_mobile": 2.4,
+        "right_img": "shopify:\/\/shop_images\/a1-section8-r.png",
+        "right_title": "Supportive saddle",
+        "right_title_fs": 1.8,
+        "right_title_fs_mobile": 2.4,
+        "right_title_lh": 3,
+        "right_title_lh_mobile": 2.4,
+        "right_description": "The saddle, 1.8 inch in thickness, is made from polyurethane foam, delivering ample cushioning and effective pressure relief.",
+        "right_description_fs": 1.4,
+        "right_description_fs_mobile": 2.4,
+        "right_description_lh": 1.8,
+        "right_description_lh_mobile": 2.4
+      }
+    },
+    "section12": {
+      "type": "a1_section12",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/Capture055A4549.png",
+        "title": "GEARED UP FOR  LONG TRIPS",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "80 miles (pure electric mode) ~ 150 miles[Assist mode]",
+        "description_fs": 2.7,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section10": {
+      "type": "a1_section10",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/a1-section10-bg.png",
+        "title": "REMOVABLEBATTERY",
+        "title_fs": 4.5,
+        "title_fs_mobile": 2.4,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "sub_title": "A1 Pro: 1920kw.h (48V 40AH)",
+        "sub_title_fs": 3.7,
+        "sub_title_fs_mobile": 2.4,
+        "sub_title_lh": 6,
+        "sub_title_lh_mobile": 2.4,
+        "description": "Samsung21700",
+        "description_fs": 2.9,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section11": {
+      "type": "a1_section11",
+      "settings": {
+        "title": "batteryexpansionkit",
+        "title_fs": 4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5,
+        "title_lh_mobile": 2.4,
+        "description": "With the aid of the battery expansion kit, the battery can be charged faster and allows the battery to work as a portable powerbank.",
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.2,
+        "description_lh_mobile": 2.4,
+        "left_img": "shopify:\/\/shop_images\/a1-section11-l.png",
+        "right_title": "outdoor power supply",
+        "right_title_fs": 2.8,
+        "right_title_fs_mobile": 2.4,
+        "right_title_lh": 7,
+        "right_title_lh_mobile": 2.4,
+        "right_description": "USB ( TYPE A \/ TYPE C ）",
+        "right_description_fs": 1.8,
+        "right_description_fs_mobile": 2.4,
+        "right_description_lh": 2.2,
+        "right_description_lh_mobile": 6.5
+      }
+    },
+    "section14": {
+      "type": "a1_section14",
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/1._055A2037.png",
+        "title": "Smart bike, phenomenal ride",
+        "title_fs": 3.7,
+        "title_fs_mobile": 2,
+        "title_lh": 8,
+        "title_lh_mobile": 2.4,
+        "description": "With logistics taken care of by ASYNC intelligence, A1 truly becomes an extension of your body and mind.",
+        "description_fs": 2,
+        "description_fs_mobile": 1.4,
+        "description_lh": 3.2,
+        "description_lh_mobile": 1.4
+      }
+    },
+    "section13": {
+      "type": "a1_section13",
+      "blocks": {
+        "swiper1": {
+          "type": "button",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/app--stay-active-track-your-acti.png",
+            "title": "ASYNC APP",
+            "title_fs": 3.2,
+            "title_fs_mobile": 2,
+            "title_lh": 4,
+            "title_lh_mobile": 2.4,
+            "description": "Enjoy A1's full range of smart features in the ASYNC App, including turn by turn navigation, digital bike key, anti-theft, ride summary and more",
+            "description_fs": 2,
+            "description_fs_mobile": 1.2,
+            "description_lh": 2.4,
+            "description_lh_mobile": 2.4,
+            "link": ""
+          }
+        },
+        "swiper2": {
+          "type": "button",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/app--stay-active-track-your-acti.png",
+            "title": "ASYNC APP",
+            "title_fs": 3.2,
+            "title_fs_mobile": 2,
+            "title_lh": 4,
+            "title_lh_mobile": 2.4,
+            "description": "Enjoy A1's full range of smart features in the ASYNC App, including turn by turn navigation, digital bike key, anti-theft, ride summary and more",
+            "description_fs": 2,
+            "description_fs_mobile": 1.2,
+            "description_lh": 2.4,
+            "description_lh_mobile": 2.4,
+            "link": ""
+          }
+        },
+        "swiper3": {
+          "type": "button",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/app--stay-active-track-your-acti.png",
+            "title": "ASYNC APP",
+            "title_fs": 3.2,
+            "title_fs_mobile": 2,
+            "title_lh": 4,
+            "title_lh_mobile": 2.4,
+            "description": "Enjoy A1's full range of smart features in the ASYNC App, including turn by turn navigation, digital bike key, anti-theft, ride summary and more",
+            "description_fs": 2,
+            "description_fs_mobile": 1.2,
+            "description_lh": 2.4,
+            "description_lh_mobile": 2.4,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "swiper1",
+        "swiper2",
+        "swiper3"
+      ],
+      "settings": {
+        "left_img": "shopify:\/\/shop_images\/a1-section13-left.png",
+        "title": "Full-color IPS dashboard",
+        "title_fs": 2.8,
+        "title_fs_mobile": 2.4,
+        "title_lh": 4,
+        "title_lh_mobile": 2.4,
+        "description": "The full-color IPS display digital dashboard is large and clear and can be easily connected to your phone.",
+        "description_fs": 1.4,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2,
+        "description_lh_mobile": 2.4
+      }
+    },
+    "section15": {
+      "type": "a1_section15",
+      "settings": {
+        "title": "Maintain it effortlessly",
+        "title_fs": 5.2,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5.2,
+        "title_lh_mobile": 2.4,
+        "description": "A1 is in-demand but undemanding. The bike is designed to take care of itself so that you can spend all your time roving.",
+        "description_fs": 1.8,
+        "description_fs_mobile": 2.4,
+        "description_lh": 2.4,
+        "description_lh_mobile": 2.4,
+        "left_img": "shopify:\/\/shop_images\/a1-section15-left.png",
+        "left_title": "Carbon belt drive",
+        "left_title_fs": 2.6,
+        "left_title_fs_mobile": 2.4,
+        "left_title_lh": 3.5,
+        "left_title_lh_mobile": 2.4,
+        "left_description": "No mess from lubricant or annoyance from chains coming off. Belt drives are quiet, clean, light, low-maintenance, and long-lasting.",
+        "left_description_fs": 5,
+        "left_description_fs_mobile": 2.4,
+        "left_description_lh": 5,
+        "left_description_lh_mobile": 2.4,
+        "right_img": "shopify:\/\/shop_images\/a1-section15-r1.png",
+        "right_title": "Water-resistant",
+        "right_title_fs": 1.8,
+        "right_title_fs_mobile": 2.4,
+        "right_title_lh": 3,
+        "right_title_lh_mobile": 2.4,
+        "right_description": "A1's 外壳 is made from xxx (material) cover\/shell (?), making the bike water-resistant.",
+        "right_description_fs": 1.3,
+        "right_description_fs_mobile": 2.4,
+        "right_description_lh": 1.5,
+        "right_description_lh_mobile": 2.4,
+        "right_img1": "shopify:\/\/shop_images\/a1-section15-r2.png",
+        "right_title1": "Built-in suspension and crank",
+        "right_title_fs1": 1.8,
+        "right_title_fs_mobile1": 2.4,
+        "right_title_lh1": 3,
+        "right_title_lh_mobile1": 2.4,
+        "right_description1": "The bike's suspension and crank are safely tucked in a xxx shell, kept from rain or dirt.",
+        "right_description_fs1": 1.3,
+        "right_description_fs_mobile1": 2.4,
+        "right_description_lh1": 1.5,
+        "right_description_lh_mobile1": 2.4
+      }
+    },
+    "section16": {
+      "type": "a1_section16",
+      "blocks": {
+        "image1": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/223.png"
+          }
+        },
+        "image2": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/224.png"
+          }
+        },
+        "image3": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/225.png"
+          }
+        },
+        "image4": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/226.png"
+          }
+        }
+      },
+      "block_order": [
+        "image1",
+        "image2",
+        "image3",
+        "image4"
+      ],
+      "settings": {
+        "title": "A1 does more than that",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 7,
+        "title_lh_mobile": 2.4
+      }
+    },
+    "section17": {
+      "type": "a1_section17",
+      "settings": {
+        "title": "MOTORTYPE A1",
+        "title_fs": 3.8,
+        "title_fs_mobile": 2.4,
+        "title_lh": 5,
+        "title_lh_mobile": 2.4,
+        "sub_title": "specification",
+        "sub_title_fs": 1.8,
+        "sub_title_fs_mobile": 2.4,
+        "sub_title_lh": 3,
+        "sub_title_lh_mobile": 2.4
+      }
+    },
+    "section18": {
+      "type": "a1_section18",
+      "blocks": {
+        "image1": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/2._055A2814.png"
+          }
+        },
+        "image2": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/Capture055A3927.png"
+          }
+        },
+        "image3": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/I85A5416.png"
+          }
+        },
+        "image4": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/I85A5478.png"
+          }
+        },
+        "image5": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/I85A6034.png"
+          }
+        },
+        "image6": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/I85A5601.png"
+          }
+        },
+        "image7": {
+          "type": "image",
+          "settings": {
+            "swiper_image": "shopify:\/\/shop_images\/I85A5549.png"
+          }
+        }
+      },
+      "block_order": [
+        "image1",
+        "image2",
+        "image3",
+        "image4",
+        "image5",
+        "image6",
+        "image7"
+      ],
+      "settings": {
+        "title": "SEE IT IN ACTION",
+        "title_fs": 5.4,
+        "title_fs_mobile": 2.4,
+        "title_lh": 7,
+        "title_lh_mobile": 2.4
+      }
+    }
+  },
+  "order": [
+    "section1",
+    "section2",
+    "section3",
+    "section4",
+    "section5",
+    "section7",
+    "section6",
+    "section9",
+    "section8",
+    "section12",
+    "section10",
+    "section11",
+    "section14",
+    "section13",
+    "section15",
+    "section16",
+    "section17",
+    "section18"
+  ]
+}

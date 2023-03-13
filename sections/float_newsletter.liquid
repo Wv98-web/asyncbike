@@ -1,0 +1,91 @@
+{{ 'float_newsletter.css' | asset_url | stylesheet_tag }}
+<div class="float-newsletter">
+    {%- if form.posted_successfully? -%}
+      <div class="form-success">
+        {{ 'newsletter.success' | t }}
+      </div>
+    {%- else -%}
+      <div class="form-sub">
+        {%- if section.settings.newsletter_heading != blank -%}
+          <h2 class="newsletter-heading">{{ section.settings.newsletter_heading | escape }}</h2>
+        {%- endif -%}
+
+        {%- form 'customer', id: 'ContactFooter', class: 'float-newsletter-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="form-field-wrapper">
+            <div class="field-box">
+              {%- if section.settings.newsletter_sub_heading != blank -%}
+                <span class="newsletter-sub-heading-pc m-hide">{{ section.settings.newsletter_sub_heading }}</span>
+              {%- endif -%}
+              <input
+                      id="NewsletterForm--{{ section.id }}"
+                      type="email"
+                      name="contact[email]"
+                      class=""
+                      value="{{ form.email }}"
+                      aria-required="true"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      autocomplete="email"
+                      {% if form.errors %}
+                        autofocus
+                        aria-invalid="true"
+                        aria-describedby="ContactFooter-error"
+                      {% elsif form.posted_successfully? %}
+                        aria-describedby="ContactFooter-success"
+                      {% endif %}
+                      placeholder="Enter your email"
+                      required
+              >
+                <button type="submit" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">SUBSCRIBE</button>
+                {%- if form.errors -%}
+                    <small class="form-message" id="ContactFooter-error">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                {%- endif -%}
+            </div>
+
+          </div>
+
+        {%- endform -%}
+
+        {%- if section.settings.newsletter_sub_heading != blank -%}
+          <p class="newsletter-sub-heading">{{ section.settings.newsletter_sub_heading }}</p>
+        {%- endif -%}
+      </div>
+
+    {%- endif -%}
+</div>
+
+<div class="email-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="32" viewBox="0 0 36 32" fill="none"><defs><path id="path_0"
+                                                                                                                                                          transform="translate(0 0) rotate(0 17.66970443725586 15.81174373626709)"
+                                                                                                                                                          d="M0,31.62L35.34,31.62L35.34,0L0,0L0,31.62Z" /></defs><g opacity="1" transform="translate(0.00006103515625 0.000003814697265625)  rotate(0 17.66970443725586 15.81174373626709)"><mask id="mask-0" fill="white"><use xlink:href="#path_0"></use></mask><g mask="url(#mask-0)"></g><g mask="url(#mask-0)"><path id="路径 71" fill-rule="evenodd" style="fill:#F4F4F5" transform="translate(0 -0.0000035491034395818133)  rotate(0 16.740259170532227 13.02061462402344)" opacity="1" d="M33.48 3.72C33.48 1.67 31.81 0 29.76 0L3.72 0C1.67 0 0 1.67 0 3.72L0 22.32C0 24.37 1.67 26.04 3.72 26.04L19.62 26.04C19.57 25.73 19.54 25.42 19.53 25.11C19.53 19.98 23.69 15.81 28.83 15.81C30.47 15.82 32.07 16.26 33.48 17.09L33.48 3.72Z M29.7615 7.4415Z M29.7615 3.7215L16.7415 10.2315L3.7215 3.7215L3.7215 7.4415L16.7415 13.9515L29.7615 7.4415L29.7615 3.7215Z " /></g><g mask="url(#mask-0)"><path id="路径 72" fill-rule="evenodd" style="fill:#F4F4F5" transform="translate(22.314140915870667 18.59821557998657)  rotate(0 6.512632369995117 6.512633323669435)" opacity="1" d="M0 6.51C0 10.11 2.92 13.03 6.51 13.03C10.11 13.03 13.03 10.11 13.03 6.51C13.03 2.92 10.11 0 6.51 0C2.92 0 0 2.92 0 6.51Z M10.2311 7.44113Z M2.79113 7.44113L5.58113 7.44113L5.58113 10.2311L7.44113 10.2311L7.44113 7.44113L10.2311 7.44113L10.2311 5.58113L7.44113 5.58113L7.44113 2.79113L5.58113 2.79113L5.58113 5.58113L2.79113 5.58113L2.79113 7.44113Z " /></g></g></svg>
+</div>
+{%- style -%}
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Float Newsletter",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "STAY UPDATED",
+      "label": "邮件标题"
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_sub_heading",
+      "label": "邮件副标题",
+      "default": "Sign up for newsletter to get updates straight to your inbox"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Float Newsletter"
+    }
+  ]
+}
+{% endschema %}

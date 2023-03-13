@@ -1,0 +1,204 @@
+<div class="app-section4" style="{% if section.settings.bg_color != blank %}background: {{ section.settings.bg_color}};{% endif %}">
+  
+    {%- for block in section.blocks -%}
+      <div class="con-box">
+        <div class="r">
+          {%- if block.settings.image != blank -%}
+            <img
+              srcset= "{{ block.settings.image | img_url: 'master' }}"
+              src="{{ block.settings.image | img_url: 'master' }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="lazy"
+            />
+          {%- endif -%}
+        </div>
+        <div class="l">
+          <div class="child-con-box">
+            {%- if block.settings.title != blank -%}
+              <h1 style="color:{{ block.settings.txt_color}};border-color:{{ block.settings.line_color}};font-size:{{ block.settings.title_fs}}rem;line-height:{{ block.settings.title_lh}}rem">
+                {{ block.settings.title | escape }}
+              </h1>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
+              <p style="color:{{ block.settings.txt_color}};font-size:{{ block.settings.description_fs}}rem;">
+                {{ block.settings.description | escape }}
+              </p>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+</div>
+
+{%- style -%}
+
+  /* ----------APP Section 4---------- */
+  .app-section4{clear: both;}
+  .app-section4 .con-box{width:89.6%;margin: 0 auto;clear: both;}
+  .app-section4 .con-box .l{float: left;width: 50%;}
+  .app-section4 .con-box .r{float: right;width: 50%;}
+  .app-section4 .l h1{color: #fff;border-bottom: solid 0.1rem #fff;padding-bottom: 3.6rem;margin-bottom: 4rem;font-family:EurostileNextW1G-WideSmBd}
+  .app-section4 .l p{color: #fff;font-family:HarmonyOS_Sans_Regular;line-height:3.8rem}
+  .app-section4 .l .child-con-box{max-width: 60%;}
+  .app-section4 .con-box:nth-child(2n) .l{float: right;position: relative;}
+  .app-section4 .con-box:nth-child(2n) .l .child-con-box{margin: 20% 0 0 10%;}
+  .app-section4 .con-box:nth-child(2n) .r{float: left;}
+  .app-section4 img{width:100%;
+  vertical-align:middlel;
+  object-fit:cover;
+  height:100%;}
+
+  @media (min-width: 767px) {
+    
+  }
+
+  @media (max-width: 821px) {
+    .app-section4 .con-box:nth-child(2n) .l .child-con-box{
+      margin: 0 0 0 10%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .app-section4 .con-box .r{ width: 100%;  height: 240px;}
+    .app-section4 .con-box .l{ width: 100% !important; min-height: 19rem !important; }
+    .app-section4 .l .child-con-box{ max-width: 100%; margin: 0 !important;}
+    .app-section4 .l h1{ font-size: 2rem !important; padding:0 0;margin-bottom:2rem }
+    .app-section4 .l p{  font-size: 1.5rem !important;line-height:2rem }
+    .app-section4 .con-box:nth-child(2n) .l .child-con-box{ margin: 0 !important; }
+  }
+
+{%- endstyle -%}
+
+
+{% schema %}
+{
+  "name": "App Section 4",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "range",
+          "id": "title_fs",
+          "label": "标题文字大小",
+          "default": 5.2,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "title_fs_mobile",
+          "label": "移动端标题文字大小",
+          "default": 1.2,
+          "min": 1,
+          "max": 5,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "title_lh",
+          "label": "标题行间距",
+          "default": 8,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "title_lh_mobile",
+          "label": "移动端标题行间距",
+          "default": 2.4,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "描述"
+        },
+        {
+          "type": "range",
+          "id": "description_fs",
+          "label": "描述文字大小",
+          "default": 2.8,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "description_fs_mobile",
+          "label": "移动端描述文字大小",
+          "default": 1.2,
+          "min": 1,
+          "max": 5,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "description_lh",
+          "label": "描述行间距",
+          "default": 3.2,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "range",
+          "id": "description_lh_mobile",
+          "label": "移动端描述行间距",
+          "default": 2.4,
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "rem"
+        },
+        {
+          "type": "color",
+          "id": "txt_color",
+          "label": "文字颜色"
+        },
+        {
+          "type": "color",
+          "id": "line_color",
+          "label": "横线颜色"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "App Section 4"
+    }
+  ]
+}
+{% endschema %}

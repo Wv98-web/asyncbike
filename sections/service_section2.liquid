@@ -1,0 +1,191 @@
+<div class="service-section2">
+  <div class = "con-box">
+    <div class="l">
+      
+      {%- if section.settings.title != blank -%}
+        <h1>
+          {{ section.settings.title | escape }}
+        </h1>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <p>
+          {{ section.settings.description | escape }}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="r">
+      {%- if section.settings.bg_img != blank -%}
+        <img
+          srcset= "{{ section.settings.bg_img | img_url: 'master' }}"
+          src="{{ section.settings.bg_img | img_url: 'master' }}"
+          alt="{{ section.settings.bg_img.alt | escape }}"
+          loading="lazy"
+        />
+      {%- endif -%}
+    </div>
+   </div>
+</div>
+
+{%- style -%}
+
+  @media (min-width: 767px) {
+    .service-section2 h1 {
+      font-size: {{ section.settings.title_fs }}rem;
+      line-height: {{ section.settings.title_lh }}rem;
+    }
+    .service-section2 p {
+      font-size: {{ section.settings.description_fs }}rem;
+      line-height: {{ section.settings.description_lh }}rem;
+    }
+    .service-section2 .con-box .l h1{
+      text-align: left;
+      max-width: 90%;
+      margin: 16% auto;
+    }
+    .service-section2 .con-box .l p{
+      
+    }
+  }
+  
+  @media (max-width: 821px){
+    .service-section2 .con-box{ align-items: center; }
+    .service-section2 .con-box .l, .service-section2 .con-box .r{
+      height: auto;
+    }
+    .service-section2 .con-box .l h1{
+      line-height: normal;
+      margin: 4% auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-section2 .con-box{
+      flex-wrap: wrap;
+    }
+    .service-section2 .con-box .l, .service-section2 .con-box .r{
+      height: auto;
+    }
+    .service-section2 .con-box .l h1{
+      margin-bottom: 2rem; 
+      text-align: left;
+      margin-top: 0rem;
+    }
+    .service-section2 .con-box .l p{
+      max-width: 100%;
+    }
+    .service-section2 .con-box .l{ margin-bottom: 20px; }
+  }
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Service Section 2",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "背景图片"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题"
+    },
+    {
+      "type": "range",
+      "id": "title_fs",
+      "label": "标题文字大小",
+      "default": 5.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_fs_mobile",
+      "label": "移动端标题文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh",
+      "label": "标题行间距",
+      "default": 8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "title_lh_mobile",
+      "label": "移动端标题行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "描述"
+    },
+    {
+      "type": "range",
+      "id": "description_fs",
+      "label": "描述文字大小",
+      "default": 2.8,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_fs_mobile",
+      "label": "移动端描述文字大小",
+      "default": 1.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh",
+      "label": "描述行间距",
+      "default": 3.2,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    },
+    {
+      "type": "range",
+      "id": "description_lh_mobile",
+      "label": "移动端描述行间距",
+      "default": 2.4,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "unit": "rem"
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Service Section 2"
+    }
+  ]
+}
+{% endschema %}
