@@ -321,7 +321,7 @@ function handleResize () {
     if (window.matchMedia("(max-width: 767px)").matches) {
         removeDom.remove();
         handleAnchors();
-        homeFullPage.reBuild();
+        // homeFullPage.reBuild();
     }
 }
 
@@ -333,5 +333,5 @@ $(window).resize(function (event) {
 })
 
 $('.video-jiantou').click(function () {
-    homeFullPage.moveSectionDown()
+    // homeFullPage.moveSectionDown()
 })
